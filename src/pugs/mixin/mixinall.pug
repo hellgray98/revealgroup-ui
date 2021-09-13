@@ -1,0 +1,161 @@
+mixin header(img,title,background,displ)
+    .mix-hero(style=`background:${background}`)
+        .mixin-flex2
+            .content
+                img(src=img, alt="")
+                h2=title
+                a(href="#" style=`display:${displ}`).btn Free Trial
+                a(href="#").btn Explore all of RoboSuite
+            .img
+                img(src="./assets/imgs/robo-mixin.png", alt="")
+mixin tr(title)
+    tr
+        td=title
+        td
+        td
+        td
+mixin roboItem(color,title,link,destription,className)
+    .item.item1(style=`border-top: 17px solid ${color}`)
+        span=title
+        img(src=link, alt="")
+        p=destription
+        a(href="#" class=`btn ${className}` style=`background-color: ${color};border:1px solid${color} `) Learn more 
+
+mixin secondNav(img,color,text1,text2,none)
+    .block-top-bar
+        img(src=img, alt="")
+        .opsiq-top-bar__nav
+            ul
+                li 
+                    a(href="#") Overview
+                li 
+                    a(href="#") Features
+                li(style=`display:${none}`)
+                    a(href="#")=text1
+                li(style=`display:${none}`) 
+                    a(href="#")=text2
+                li 
+                    a(href="#") Pricing
+            a(href="#" style=`background:${color}`).btn Free Trial
+        select
+            option Jump to
+            option Overview
+            option Features
+            option(style=`display:${none}`)=text1
+            option(style=`display:${none}`)=text2 
+            option Pricing
+
+
+mixin roboSpace(color,h3Text,h4Text,pText)
+    .robo-space-flex2
+        .content
+                h3=h3Text
+                h4=h4Text
+                p=pText    
+        .space(style=`border-bottom:1px solid ${color}`)
+    .height
+
+mixin itemSlide(img,color,title,destription)
+    .item.mix-item
+        .content
+            img(src=img, alt="")
+            hr(style=`border-bottom:1px solid ${color}`)
+            h3=title
+            p=destription
+mixin mixRoboSS1(color,content,p,btn1,btn2,btn3,style1,style2)
+    .mix-ss-mix-block(style=`background-color:${color}`)   
+        h4=content
+        p=p 
+        a(href="#").btn=btn1
+        a(href="#" style=`visibility:${style1}`).btn=btn2
+        a(href="#" style=`visibility:${style2}`).btn=btn3
+
+mixin mixRoboSS2(color,contentH3,contentP,img1 ,h1,p1,img2,h2,p2,img3,h3,p3,countLoop)
+    .robo-ss2
+        .flex2
+            .content
+                h3=contentH3
+                p=contentP
+            .list-item
+                -for(i=1;i<countLoop;i++)
+                    .item
+                        img(src=img1, alt="")
+                        h4(style=`color:${color}`)=h1
+                        p=p1
+                    .item
+                        img(src=img2, alt="")
+                        h4(style=`color:${color}`)=h2
+                        p=p2
+                    .item
+                        img(src=img3, alt="")
+                        h4(style=`color:${color}`)=h3
+                        p=p3 
+            .owl-carousel.owl-theme.owl-landing-mobie-ss5
+                    -for(i=1;i<countLoop;i++)
+                        .item
+                            img(src=img1, alt="")
+                            h4(style=`color:${color}`)=h1
+                            p=p1
+                        .item
+                            img(src=img2, alt="")
+                            h4(style=`color:${color}`)=h2
+                            p=p2
+                        .item
+                            img(src=img3, alt="")
+                            h4(style=`color:${color}`)=h3
+                            p=p3 
+                            
+mixin extensive(color,className, mostTitle,name,title,price,textBtn,class1,class2,buy,padding)
+    div(class=`item ${className}`)
+        .content(style=`padding:${padding}`)
+            .title
+                p(style=`background-color:${color}`)=mostTitle
+            span(class=`${class1}`)=name
+            h3(class=`${class2}`)=title
+            .price
+                span USD
+                span=price
+            p per user, per month unlimited submissions billed annually
+            a(href="#" style=`background-color:${color}`).btn=textBtn
+            a(href="#" class="buy")=buy
+
+mixin extent-block2(color)
+    .box-extent(style=`background-color:${color}`)
+        p 30+ users? We offer discounts for large teams! 
+        a(href="#").btn Need Help? Speak to an Expert
+
+mixin extent-block3(image, h3Text, pText, h4Text, color)
+    .extent-block3-flex2
+        .img
+            img(src=image, alt="")
+        .content
+            .item
+                h3=h3Text
+                hr(style=`border-bottom:1px solid ${color}`)
+                p=pText
+                h4=h4Text
+                a(href="#" style=`background:${color}`).btn View Customer Stories
+
+
+mixin extent-block4(color,color2,image,p1,p2,color3)
+    .extent-block4-flex2(style=`background:${color2}`)
+        .content    
+            p=p1 
+            p=p2
+            a(href="#" style=`background:${color};color:${color3}`).btn Sign up for Training
+        .img
+            img(src=image, alt="")
+
+mixin ArticleItem(img,iText,h3Text,pText,aText,className,link)
+    .item
+        a(href=`${link}`)
+            img(src=img, alt="")
+        //class news, event,whhite-paper
+        div(class=`content ${className}`)
+            .start
+                i=iText
+                h3
+                    a(href=`${link}`)=h3Text
+                p=pText
+            .end
+                a(href="") Learn more      

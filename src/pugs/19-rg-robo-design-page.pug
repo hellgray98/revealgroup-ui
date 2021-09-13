@@ -1,0 +1,54 @@
+extends ./parts/layout.pug
+prepend meta
+    title The Natives - DESIGNER
+    
+block main-wrapper
+    h1(style="display:none") The Natives - DESIGNER 
+    .wrapper-child.designer-page
+        +secondNav("./assets/imgs/designer01.svg","#FDBB58",'','','none')
+        +header('./assets/imgs/robo-designer.svg','Instantly create automation components to best practice standards.','#FDBB58')
+        .ss1
+           +roboSpace('#FDBB58','The highest quality automations begin with RoboDesigner','What is RoboDesigner','RoboDesigner reduces configuration time and effort by instantly creating automation components to best practice standards, for you. Created for Blue Prism users.')
+        .mix-ss-mix-item
+            .owl-carousel.owl-theme.owl-landing-mobie-ss5
+                +itemSlide("./assets/imgs/block-suite.png","#FDBB58","Create Automation Components, Automatically","Upload your design documents and let RoboDesigner generate your new objects from scratch.")
+                +itemSlide("./assets/imgs/block-suite01.png","#FDBB58","Save Time and Dollars","RoboDesigner speeds up delivery while reducing effort by ~30%. By applying best practices it eliminates rework dramatically reduces support costs.")
+                +itemSlide("./assets/imgs/block-suite03.png","#FDBB58","Seamless Blue Prism Best Practice","We use the latest best practice component templates so you can rest easy knowing your configuration will be consistently built, first time, every time.")
+           
+        +mixRoboSS1("#FDBB58","RoboDesigner has been built by Reveal Group using the experience, best practices and quality standards developed by delivering thousands of automated solutions to companies worldwide as Platinum partners of Blue Prism.","","Get a Demo","Try it Free","","","hidden")
+        +mixRoboSS2('#FDBB58',
+                    'Start your delivery right, every time',
+                    'To build high quality solutions, RoboDesigner sets you up for success by ‘automagically’ creating your automation objects',
+                    './assets/imgs/designer02.jpg','Instant',
+                    'Building objects is time-consuming and repetitive — so we automated it! RoboDesigner builds your automation components so you can configure with confidence.',
+                    './assets/imgs/designer03.jpg','Reusable Components',
+                    'Creating custom components can be costly to support and maintain. RoboDesigner helps you configure objects to be reused across multiple automations.',
+                    './assets/imgs/designer04.jpg','Productivity & Consistency',
+                    'Productive developers are happy developers. Give your team all the support and tools they need to deliver consistent, quality solutions each and every time.',
+                    2
+        )
+        .ss2 
+            h3 PRICING
+            h4 One Bundle. One Price. Two Great Products.
+            p We’ve combined the power of RoboDesigner and RoboReview into a single, unified offering.<br/> It’s easy to set up, easy to use and it’s priced for companies of all sizes to benefit.
+            ul
+                li RoboManager
+                li.active ROBODESIGNER + ROBOREVIEW
+                li FULL SUITE
+            .owl-carousel.owl-theme.owl-landing-mobie-ss5.blue-prism.mixin-extent
+                +extensive("#FABA58","", "","Small Teams","1-9 users","$340","Try Free For 14 Days","lagre","small","Buy Now")
+                +extensive("#FABA58"," most-extent", "RECOMMENDED","Growing Teams","Foundation Training Course ","$300","Enquire Now","lagre","small")
+                +extensive("#FABA58","", "","Larger Teams","20-29 users","$250","Enquire Now","lagre","small",'','40px 40px 56px 40px') 
+            
+            +extent-block2('#FABA58')
+        
+        +extent-block3('assets/imgs/opsiq07.png','RoboDesigner cuts delivery time by ~30% freeing your team to deliver more','“Using RoboDesigner helped us reduce our average delivery wave from 10 weeks to 7 weeks. We’re confident our automation components are high-quality and reusable, too!”','Design Authority Lead, Mid-Sized US-Based Insurance Company','#FDBB58')
+        +extent-block4('#FABA58','','assets/imgs/designer05.png','Whether you’re already using the tools or want to dip your toe in for the first time, you can sign up free for our RoboDesigner™ Certified Professional course. Successfully complete the courses to earn Certified Professional Badges and share them with your colleagues and connections on LinkedIn.  Use the code #automatebetter to register.','In the 32 minute RoboDesigner™ course, learn how to use our tool to accelerate the repeatable development of high-quality Blue Prism objects.')
+        .extent-block5
+            .content-left
+                .content
+                    h4 Explore the<br/> whole RoboSuite
+                    p Tools to help every automation team unleash its full potential.
+            .owl-carousel.owl-theme.owl-2-item.robo-item 
+                +roboItem('#00A755','IDENTIFY, DELIVER, BENEFIT','assets/imgs/auto-reveal01.svg','A single source of truth to identify, prioritize, deliver and realize benefits from automation, for any RPA tool.')
+                +roboItem('#DA4039','AUTOMATE CODE REVIEWS','assets/imgs/auto-reveal03.svg','A proactive self-service check of your Blue Prism code quality so you get continuous, real-time feedback.')

@@ -1,0 +1,47 @@
+extends ./parts/layout.pug
+prepend meta
+    title The Natives - AUTOMATE
+    
+block main-wrapper
+    h1(style="display:none") The Natives - AUTOMATE
+    .wrapper-child.automate
+        .hero-automate-flex2
+            .content
+                h2 Automate Better
+                p Three Powerful Tools, One Suite Package 
+                a(href="#").btn Get a Demo
+                a(href="#").btn Play Video
+        .ss1
+            .flex2
+                include ./parts/includes/08-block-tool-robo-suite.pug
+                .img 
+                    img(src="./assets/imgs/tool-robo-img.png", alt="")
+        .ss2
+            .owl-carousel.owl-theme.owl-deliver-ss2.robo-item
+                +roboItem('#21B052','IDENTIFY, DELIVER, BENEFIT','assets/imgs/auto-reveal01.svg','A single source of truth to identify, prioritize, deliver and realize benefits from automation, for any RPA tool.')
+                +roboItem('#FDBB58','AUTOMATE DELIVERY','assets/imgs/auto-reveal02.svg','Instantly creates Blue Prism automation components to best practice standards, for you.')
+                +roboItem('#EF4C3E','AUTOMATE CODE REVIEWS','assets/imgs/auto-reveal03.svg','A proactive self-service check of your Blue Prism code quality so you get continuous, real-time feedback.')
+        .ss3
+            h4 TRY FOR FREE
+            h3 Get started with our tools, for free
+            p Reveal Group’s tools are free to try, easy to set up,<br/> and work seamlessly together.
+            a(href="#").btn Try a Demo 
+            .height
+        .ss4
+            .owl-carousel.owl-theme.owl-deliver-ss2
+                -for(i=1;i<4;i++)
+                    .item
+                        img(src=`./assets/imgs/block-suite0${i}.png`, alt="") 
+        .ss5
+            .flex2
+                .flex2__left
+                    .content
+                        h4 Ready to generate your benefits?
+                        a(href="#").btn Get Started
+                .flex2__right   
+                    .content
+                        h3 Calculate what Reveal <br/>RoboSuite™ could do for you
+                        p Tell us about yourself and see how RoboSuite can unleash the<br/> potential of your automation program. Whether it’s delivering <br/>more automated solutions, saving time for your automation<br/> team or increasing your ROI.
+        .ss6
+            h3 More ways to benefit with RoboSuite
+            include ./parts/includes/09-block-owl-case.pug

@@ -1,0 +1,57 @@
+extends ./parts/layout.pug
+prepend meta
+    title The Natives - REVIEW
+    
+block main-wrapper
+    h1(style="display:none") The Natives - REVIEW 
+    .wrapper-child.review-page
+        +secondNav("./assets/imgs/robo-review01.svg","#EF4C3E",'','','none')
+        +header('./assets/imgs/robo-review.svg','ntelligent code reviews, on demand.','#EF4C3E','none')
+        .ss1
+           +roboSpace('#EF4C3E','Stop Bad Code In Its Tracks','','RoboReview provides a proactive self-service check of your code, so you get feedback in line with Blue Prism best practices… every time. Created for Blue Prism users.')
+        .mix-ss-mix-item
+            .owl-carousel.owl-theme.owl-4-item
+                +itemSlide("./assets/imgs/block-suite.png","#EF4C3E","Helpful for Beginners","Say goodbye to needing time with a Delivery Lead and simply upload your code package to have it RoboReview’ed for fast, insightful feedback!")
+                +itemSlide("./assets/imgs/block-suite01.png","#EF4C3E","Actionable  Feedback","We don’t just tell you where your configuration can be improved, our build review checklists give you all the details you need to act.")
+                +itemSlide("./assets/imgs/block-suite03.png","#EF4C3E","Powerful for Professionals","Delivery leads no longer have to review each process click by tedious click, freeing them to focus on what matters.")
+                +itemSlide("./assets/imgs/block-suite.png","#EF4C3E","Self-Service","Convenience is king. Developers are empowered to have their code reviewed on-demand, as often as they like.")
+
+        +mixRoboSS1("#EF4C3E","RoboReview has been built by Reveal Group using the experience, best practices and quality standards developed by delivering thousands of automated solutions to companies worldwide.","","Get a Demo","Try it Free","","","hidden")
+        +mixRoboSS2('#EF4C3E',
+                    'Start your delivery right, every time',
+                    'Thorough reviews are key to delivering quality automations. Running a self-service check in RoboReview assesses each process and makes identifying errors easier and faster.',
+                    './assets/imgs/designer02.jpg','Automate Code Reviews',
+                    'We know Blue Prism configuration standards and have you covered! RoboReview instantly checks every best practice area so you can be confident your automated solution passes all scrutiny.',
+                    './assets/imgs/designer03.jpg','Adhere to Best Practices',
+                    'Our build review checklists reference a variety of training, best practices, and support resources so help is never far away. You can also access our legendary training academy.',
+                    './assets/imgs/designer04.jpg','Learn Continuously',
+                    'Productive developers are happy developers. Give your team all the support and tools they need to deliver consistent, quality solutions each and every time.',
+                    3
+        )
+        .ss2 
+            h3 PRICING
+            h4 One Bundle. One Price. Two Great Products.
+            p We’ve combined the power of RoboDesigner and RoboReview into a single, unified offering.<br/> It’s easy to set up, easy to use and it’s priced for companies of all sizes to benefit.
+            ul
+                li 
+                    a(href="#") RoboManager
+                li.active 
+                    a(href="#") ROBODESIGNER + ROBOREVIEW
+                li 
+                    a(href="#") FULL SUITE
+            .owl-carousel.owl-theme.owl-landing-mobie-ss5.blue-prism.mixin-extent
+                +extensive("#EF4C3E","", "","Small Teams","1-9 users","$340","Try Free For 14 Days","lagre","small","Buy Now")
+                +extensive("#EF4C3E"," most-extent", "RECOMMENDED","Growing Teams","Foundation Training Course ","$300","Enquire Now","lagre","small")
+                +extensive("#EF4C3E","", "","Larger Teams","20-29 users","$250","Enquire Now","lagre","small",'','40px 40px 56px 40px') 
+            +extent-block2('#EF4C3E')
+        
+        +extent-block3('assets/imgs/manager03.jpg','RoboDesigner cuts delivery time by ~30% freeing your team to deliver more','“As a small shop, we couldn’t afford a Design Authority. RoboReview has given us this capability and enabled us to upskill our developers quickly. It has made a massive difference!”','RPA Program Lead, North American Bank','#EF4C3E')
+        +extent-block4('#FFFFFF','#EF4C3E','assets/imgs/manager02.png','Whether you’re already using the tools or want to dip your toe in for the first time, you can sign up free for our RoboReview™ Certified Professional course. Successfully complete the courses to earn Certified Professional Badges and share them with your colleagues and connections on LinkedIn.  Use the code #automatebetter to register.','Complete the 19 minute RoboReview™ course to learn how to accelerate your Blue Prism code review process and adhere to best practices with ease.','#EF4C3E')
+        .extent-block5
+            .content-left
+                .content
+                    h4 Explore the<br/> whole RoboSuite
+                    p Tools to help every automation team unleash its full potential.
+            .owl-carousel.owl-theme.owl-2-item.robo-item 
+                +roboItem('#F3B45A','AUTOMATE DELIVERY','assets/imgs/auto-reveal02.svg','Instantly creates Blue Prism automation components to best practice standards, for you.')
+                +roboItem('#00A755','IDENTIFY, DELIVER, BENEFIT','assets/imgs/auto-reveal01.svg','A single source of truth to identify, prioritize, deliver and realize benefits from automation, for any RPA tool.')

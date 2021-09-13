@@ -1,0 +1,333 @@
+.suite-page{
+    .hero-suite-flex2{
+        h2{
+            @extend %share-h40;
+            color:$white;
+            font-weight: bold;
+            margin: 35px 0;
+            font-size: 40px;
+        }
+        .form img{ 
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: -80px;
+        }
+        @include respond-to(1024){
+            .form img{ 
+                position: relative;
+                width: 100%;
+                left: 0;
+                bottom: 0px;
+            }
+        }
+        @include respond-to(768){
+             
+            
+        }
+        @include respond-to(550){
+            .form img{ 
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: -80px;
+            }
+            min-height: 700px;
+            
+        }
+        @include respond-to(450){
+            .form img{ 
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: -80px;
+            }
+            min-height: 650px;
+        }
+    }
+    .ss1{
+        position: relative;
+        min-height: 520px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h4{
+            @extend %share-h3;
+            color:$darkblue;
+            margin: 0;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        h2{
+            @extend %share-h40;
+            font-weight: bold;
+            color:$textblack;
+            margin: 20px 0 30px 0;
+        }
+        p{
+            margin: 0;
+        }
+        .list-logo{
+            width: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%); 
+            display: flex;
+            justify-content: center;
+             img{
+                 width: 30%;
+                 padding: 20px;
+                 border: 1px solid $background;
+                 &:nth-child(1), &:nth-child(2){
+                     background-color: $background;
+                 }
+                 &:nth-child(3){
+                     margin-left: 40px;
+                     background-color: $white;
+                 }
+             }
+             
+             
+        }
+        @include respond-to(768){
+            padding: 0 50px;
+            .list-logo{
+                width: 100%;
+                padding:0 20px;
+            }   
+        }  
+    }
+    .ss2{
+        position: relative;
+        padding: 130px;
+        background-color: $background; 
+        @include respond-to(768){
+            padding:40px 51px;  
+            .item{
+                .content{
+                    border: none;
+                }
+            }
+        }
+        .owl-dots {
+            margin: 0 0 30px 0;
+            text-align: center;
+            .owl-dot{
+                background-color: $white;
+            }
+            .active{
+                background-color: $darkblue2;
+            }
+        }
+        .small{
+            color:$darkblue2;
+            margin-top: 10px;
+        }
+        .buy{
+            display: block;
+            margin-top: 15px;
+            text-decoration: underline;
+            text-align: center;
+            color: $darkblue2;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .mixin-extent{
+            .most-extent{
+                .content{
+                    border: 2px solid #1E99D5;
+                }
+            } 
+        } 
+    }
+    .ss3{
+        padding: 90px 200px;
+        &>h4{
+            color: $darkblue2;
+            margin-bottom: 10px;
+            @extend %share-h13;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        &>h3{
+            color: $textblack;
+            line-height: 48px;
+            margin: 20px 0;
+            @extend %share-h40;
+            font-size: 40px;
+            margin-bottom: 60px; 
+            @include respond-to(1024){
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+        .collapses{
+            .collapsible {
+                background-color: $white;
+                color: $textblack;
+                cursor: pointer;
+                padding: 30px 0;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 20px;
+                border-bottom: 1px solid #DBDBDB;
+                font-weight: 600;
+              }
+              
+              .active, .collapsible:hover {
+                background-color: #cccc;
+              }
+              
+              .collapsible:after {
+                content: '\002B';
+                color: $textblack;;
+                 
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+              }
+              
+              .active:after {
+                content: "\2212";
+                color: $textblack;
+              }
+              
+              .content {
+                padding: 0 18px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+                
+              }
+        }
+        @include respond-to(1024){
+            padding: 140px 40px 40px 40px;
+        }
+    }
+    .ss4{
+        background-color: $blue;
+        padding: 90px;
+        text-align: center;
+       h4{
+            color:$white;
+            @extend %share-p;
+            margin-bottom: 25px;
+        }
+    
+        h3{
+            @extend %share-h40;
+            color:$white;
+            margin-bottom: 35px;
+        }
+        .height{
+            background-color: $blue;
+        }
+        p{
+            color: $white;
+        }
+        .btn{
+            border: 1px solid $white;
+            color: $white;
+            margin-right:  20px;
+            margin-top: 40px;
+            &:hover{
+                background-color: $white;
+                color: $blue;
+            }
+        }
+        @include respond-to(1024){
+            padding: 40px;
+        }
+        @include respond-to(600){
+            p,h3,h4{
+                text-align: left;
+            }
+            p{
+                margin-bottom:30px ;
+            }
+            h3{
+                line-height: 28px;
+            }
+            .btn{
+                margin-top: 20px;
+            }
+            
+        }
+    }
+    .ss5{
+        .owl-dots {
+            text-align: left;
+            margin-top: 0;
+            padding-bottom: 40px;
+           .owl-dot{ 
+               background: $background; 
+           }
+           .active{ 
+               background: $blue; 
+           }
+       }
+        position: relative;
+        padding: 0 90px;
+        background: url(../imgs/bg-suitr-ss4.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        .item{
+            padding: 30px;
+        }
+        .owl-carousel{
+            position: absolute;
+            top: -30%;
+            left: 0;
+            width: 100%;
+            padding: 0 90px;
+        }
+        @include respond-to(1350){
+            min-height: 250px;
+        }
+        @include respond-to(1024){
+            padding:0 40px;
+            
+            .owl-carousel{
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 0 0;
+            } 
+        }
+        
+        @include respond-toSP(1650){
+            min-height: 380px;
+        }
+        @include respond-to(600){
+            padding: 40px;
+            .owl-carousel {
+                position: absolute;
+                top: -40%;
+                left: 0;
+                width: 100%;
+                padding: 0 40px;
+            }
+            min-height: 350px;
+        }
+        @include respond-to(600){
+            
+            min-height: 350px;
+        }
+        @include respond-to(450){
+            
+            min-height: 250px;
+        }
+        @include respond-to(350){
+            
+            min-height: 180px;
+        }
+    }
+    
+}

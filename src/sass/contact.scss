@@ -1,0 +1,254 @@
+.hero-contact-flex2{
+    background-color: $background;
+    .img{
+        width: 40%;
+    }
+    .hero-content{
+        width: 60%;
+        display: flex;
+        padding:80px;
+        .content{
+            width: 85%;
+            padding: 90px 0 0 0;
+        }
+
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    h2{
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: 1px;
+        color:$darkblue2;
+            margin-bottom: 20px;
+    }
+    h4{
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 47px;
+        letter-spacing: -1.12px;
+        color:$textblack; 
+        margin: 40px 0 10px 0;
+    }
+    p{
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    @include respond-to(1024){
+      .img,.hero-content{
+          width: 100%;
+      } 
+      .hero-content{
+          padding:40px;
+          .content{
+            width: 100%;
+        }
+      } 
+      h2{
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 10px;
+    }
+    h4{
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 37px; 
+        margin: 20px 0;
+    }
+    p{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    }
+}
+.contact{
+    .hero-contact-flex2{
+        img{
+            @include respond-to(1024){
+                height: 332px;
+            }
+        }
+        h2{
+            @include respond-to(1024){
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+        .hero-content{
+            .content{
+                @include respond-to(1024){
+                    padding: 0;
+                }
+            }
+        }
+    }
+    input,select,textarea{
+        background-color: $background !important;
+        &:focus{
+            background-color: $darkblue2 !important;
+            color: $white !important;
+        }
+    }
+    .ss1{
+        padding:50px 90px;
+        @include respond-to(1024){
+            padding:40px;
+        }
+        .form-work-flex2 {
+            margin-top: 0;
+            .content-form{
+                align-items: normal;
+                p{
+                    font-size: 14px;
+                    margin: 0;
+                    color: #2D3D51;
+                    height: 70px;
+                    @include respond-to(768){
+                        height: 100px;
+                    }
+                }
+                a{
+                    font-size:12px;
+                    text-decoration: underline;
+                    color: #1E99D5;
+                    margin: 0;
+                }
+            }
+        }
+        .owl-dots {
+            text-align: center;
+            margin-top: 30px;
+           .owl-dot{
+            background-color: $grey;
+           }
+           .active{
+               background-color: $blue;
+           }
+         
+        }
+    }
+    .contact-form{
+        &>h3{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: -0.672px;
+            color:$textblack;
+            margin: 0 0 20px 0;
+        }
+        &>.btn{
+            border: 1px solid $darkblue2;
+            color:$darkblue2;
+            margin-right: 10px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            &:hover{
+                background-color: $darkblue2;
+                color: $white;
+            }
+        }
+        input,textarea{
+            &:focus{
+                &::placeholder{
+                    color: $white;
+                }
+            }
+            @include respond-to(768){
+                width: 100%!important;
+            }
+        }
+        @include respond-to(768){
+            &>.btn{
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .btn{
+                width: 100%;
+                &:nth-child(3){
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+    .location{ 
+        width: 100%;
+        &>h3{
+            font-size: 13px;
+            line-height: 18px;
+            letter-spacing: 1px;
+            color:$textblack;
+            margin-bottom: 10px;
+            @include respond-to(1024){
+                font-size: 12px;
+            }
+        }
+        h4{
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 35px;
+            letter-spacing: -0.84px;
+            color:$textblack;
+            margin: 20px 0;
+            @include respond-to(1024){
+                font-size: 24px;
+            }
+        }
+       
+    }
+    .owl-maps{ 
+        h3{
+            font-weight: 600;
+            font-size: 14px;
+            padding-bottom: 10px;
+        }
+        p{
+            padding-bottom: 10px;
+        }
+        @include respond-toSP(1024){
+            display: none;
+        }
+        .owl-dots{
+            text-align: left;
+            margin: 60px 0 40px 0;
+            .owl-dot{
+                background-color: #EFF1F1;
+            }
+            .active{
+                background-color:#0D84C7;
+            }
+        }
+    }
+    .maps{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .map{
+            padding:10px 0;
+            width: 50%;
+            padding-right: 50px;
+            h3{
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 20px;
+                color:$textblack;
+                margin: 20px 0;
+            }
+            a{
+                text-decoration: underline;
+                font-size: 12px;
+                color:$darkblue;
+                display: inline-block;
+                margin-top:30px;
+            }
+        }
+        @include respond-to(1023){
+            display: none;
+        }
+
+    }
+}

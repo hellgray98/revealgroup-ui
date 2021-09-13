@@ -1,0 +1,117 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title The Natives - ESTABLISH
+    
+block main-wrapper
+    h1(style="display:none") The Natives - ESTABLISH
+    .wrapper-child.establist
+        .block-fix
+            ul
+                li
+                    a(href="#ss2")
+                li
+                    a(href="#ss3")
+                li
+                    a(href="#ss4")
+                li
+                    a(href="#ss5")
+                li
+                    a(href="#ss6")
+                 
+        .common-hero.establist-hero
+            .induction-flex2
+                .content
+                    h2 Establish
+                    p Build an operating model to Enable your<br/> organization to embrace Intelligent<br/> Automation
+                    a(href="#").btn Learn more 
+                    a(href="#").btn Explore Training Courses 
+                .img
+                    img(src="./assets/imgs/img-induction.jpg", alt="")
+        #ss1.satan-nav
+            h2 BLUEPRINT FOR SCALE – BfS
+            h3 Reveal Group’s Blueprint for Scale allows our clients to lay the foundations for a best practice intelligent automation program, using five key pillars
+            .flex2 
+                .img
+                    img(src="./assets/imgs/ss1-establist.svg", alt="")
+                .content
+                    hr
+                    h3 What is it
+                    p Blueprint for Scale is the proven operating model we have used to<br/> implement Intelligent Automation at over 150 clients.<br/> It is our blueprint for building a best practice automation program at scale.<br/> It is the reason we are the most certified Intelligent Automation service company and why our clients achieve and sustain the results they do.
+        <img class="bg-homepage" src="assets/imgs/bg-homepage1.jpg" style="width:100%;height:260px;object-fit: cover;">
+        #ss2.satan-nav
+            h3 Establish
+            h2 Components of the Blueprint for Scale
+            .component-d-flex
+                -for(i=1;i<6;i++)
+                    .item
+                        .img
+                            img(src=`assets/imgs/icons/icon-establist0${i}.svg`, alt="")
+                        ul
+                            li Defines the Enterprise Vision &amp; Strategy for Intelligent Automation while detailing the Program Governance framework to make it happen
+                            li Details the Organization &amp; People requirements for building an Automation Program and the Capability &amp; Training required to support it
+                            li Ensures that embedded templates and policies conform to existing Change Management methodologies
+            .owl-carousel.owl-theme.owl-landing-mobie-ss5    
+                 -for(i=1;i<6;i++)
+                    .item
+                        .img
+                            img(src=`assets/imgs/icons/icon-establist0${i}.svg`, alt="")
+                        ul
+                            li Defines the Enterprise Vision &amp; Strategy for Intelligent Automation while detailing the Program Governance framework to make it happen
+                            li Details the Organization &amp; People requirements for building an Automation Program and the Capability &amp; Training required to support it
+                            li Ensures that embedded templates and policies conform to existing Change Management methodologies  
+        #ss3.satan-nav
+            h4 Establish
+            h3 BfS Capability Components
+            .bfs-flex2
+                .bfs-left.bfs-d-flex
+                    - for(i=1;i<6;i++)
+                        .item
+                            h3 Vision &amp; Strategy
+                            p Vision &amp; Strategy is critical to defining the overarching goals and objectives for the automation program.  It facilitates a consistent message for the automation program's purpose throughout the organization
+                .owl-carousel.owl-theme.owl-landing-mobie-ss5
+                    - for(i=1;i<6;i++)
+                        .item
+                            h3 Vision &amp; Strategy
+                            p Vision &amp; Strategy is critical to defining the overarching goals and objectives for the automation program.  It facilitates a consistent message for the automation program's purpose throughout the organization
+                .bfs-right 
+                    .item
+                        img(src="./assets/imgs/icons/bfs-right01.svg", alt="")
+                        h4 Key Resources
+                        ul
+                            li Executive Sponsor
+                            li Automation Leadership
+                            li CoE Team
+                    .item
+                        img(src="./assets/imgs/icons/bfs-right01.svg", alt="")
+                        h4 Key Artifacts
+                        ul
+                            li Automation Vision and CoE charter
+                            li Governance &amp; Benefit Realization Framework
+                            li Automation Org Chart with required Roles and Responsibilities
+                            li Onboarding &amp; Training Plans
+        <img class="bg-homepage" src="assets/imgs/bg-establist1.jpg" style="width:100%;height:340px;object-fit: cover;">
+        #ss4.satan-nav
+            .program-flex2
+                .img
+                    img(src="assets/imgs/img-program.png", alt="")
+                .content
+                    h3 Program Healthchecks
+                    p Program Healthchecks are your team's chance to take an honest look in the mirror. We will assess your automation program against the Blueprint for Scale attributes in three phases, typically completed within one week.
+                    p At the end of your Program Healthcheck, you'll identify strengths to exploit as well as challenge areas to grow. The assessment provides scoring, benchmarking, key findings, and prioritized actions for each.
+                    p Reveal Group has worked with 100+ Intelligent Automation clients to build an industry leading benchmarking capability to showcase how you compare against peers.
+        include ./parts/includes/05-block-landing.pug
+        include ./parts/includes/06-block-include-landing-ss1.pug
+        #ss5.satan-nav
+            .induction-flex2.block-induction
+                .content
+                    h4 COURSES
+                    h3  Ready to Become a <br/>Blue Prism Developer?
+                    p We’ve combined the power of RoboDesigner and RoboReview into a single, unified offering.
+                    p It’s easy to set up, easy to use and it’s priced for companies of all sizes to benefit.
+                    a(href="#").btn Learn more
+                .img
+                    img(src="./assets/imgs/img-induction.jpg", alt="")
+        .height
+        #ss6
+            include ./parts/includes/04-block-frm-include.pug

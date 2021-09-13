@@ -1,0 +1,84 @@
+extends ./parts/layout.pug
+prepend meta
+    title The Natives - ENABLE
+    
+block main-wrapper
+    h1(style="display:none") The Natives - ENABLE
+    .wrapper-child.enable
+        .common-hero.enable-hero
+            .induction-flex2
+                .content
+                    h2 Enable
+                    p Embed a scalable and secure platform <br/>to support your growing team of<br/> digital workers
+                    a(href="#").btn Get started
+                .img
+                    img(src="./assets/imgs/img-induction.jpg", alt="")
+        .ss1
+            .content
+                h2 Our certified platform and infrastructure team are highly<br/> experienced with building platforms for Blue Prism, UiPath, <br/>Automation Anywhere and Microsoft Power Automate.
+            
+        .ss2
+            .services
+                h2 INTELLIGENT AUTOMATION PLATFORM SERVICES
+                .owl-carousel.owl-theme.owl-5-item
+                    -for(i=1;i<6;i++)
+                        img(src=`./assets/imgs/enable-g-0${i}.png`, alt="")  
+            .destription
+                p A performant, stable and resilient platform is critical to the long-term success of intelligent automation and its scalability.
+        <img class="bg-homepage" src="assets/imgs/bg-homepage1.jpg" style="width:100%;height:260px;object-fit: cover;"> 
+        .ss3
+            h3 Scalable, fit-for-purpose purpose platform infrastructure can be designed, provisioned and installed in as little as seven weeks.<br/>The platform is an important component to get right, and our approach<br/> ensures clients are able to run their existing automation processes in a secure and resilient environment
+        .ss4
+           h3 Platform Setup Process
+           .owl-carousel.owl-theme.owl-deliver-ss2 
+                .item
+                    .content
+                        h3 Discover
+                        ul
+                            li Identify key stakeholders, including Solution Architects, Security, Risk, System Owner and IT Project Manager
+                            li Ensure stakeholders share a common understanding of infrastructure needs
+                            li Understanding the current IT environment, policies and constraints, plus the requirements for the solution. 
+                        h4 Reveal Group will stand-up the platform and intall Blue Prism 
+                .item
+                    .content
+                        h3 Design
+                        ul
+                            li Document the Solution Overview to address core needs
+                            li Fit within current IT policies to meet requirements and gain acceptance from key stakeholders 
+                            li Enable preparation of detailed build and deploy activities 
+                        h4 Reveal Group will stand-up the platform and intall Blue Prism  
+                .item
+                    .content
+                        h3 Deploy
+                        ul
+                            li Ensure all prerequisites are met prior to commencing installation
+                            li Complete installation, configuration, troubleshooting and build
+                            li Ensure installation adheres to design in accordance with best practices
+                        h4 Reveal Group will stand-up the platform and intall Blue Prism 
+        .ss5
+            .block-include-landing-ss1
+                .content
+                    h3 Reveal Group has a proven track record of helping clients design and implement RPA Platforms that meet their unique operating environments and adhere to best practice
+                .img
+                    img(src="./assets/imgs/enable-g-06.png", alt="")
+        .ss6
+            h3 Cloud Support
+            p Clients choose to leverage Reveal Group’s Cloud Services to<br/> meet the needs of their Intelligent Automation programs,<br/> these are just a few.
+            h4 BENEFITS OF CLOUD SERVICES
+            .desktop
+                -for(i=1;i<9;i++)
+                    .item
+                        img(src=`assets/imgs/icons/cloud-0${i}.svg`, alt="")
+                        p Built-in resillience, with high availability for key components in all environments and Production Active/Active multi-site DR
+            .owl-carousel.owl-theme.owl-deliver-ss2 
+                -for(i=1;i<9;i++)
+                    .item
+                        img(src=`assets/imgs/icons/cloud-0${i}.svg`, alt="")
+                        p Built-in resillience, with high availability for key components in all environments and Production Active/Active multi-site DR
+
+            .height
+        .ss7
+            include ./parts/includes/04-block-frm-include.pug
+
+
+                        

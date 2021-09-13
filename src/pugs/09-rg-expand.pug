@@ -1,0 +1,66 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title The Natives - MANAGE
+    
+block main-wrapper
+    h1(style="display:none") The Natives - MANAGE
+    .wrapper-child.expand
+        .common-hero.expand-hero
+            .induction-flex2
+                .content
+                    h2 Expand
+                    p Extend the impact of intelligent automation<br/> with technologies that fit your needs
+                    a(href="#").btn Learn more  
+                .img
+                    img(src="./assets/imgs/img-induction.jpg", alt="")
+        .ss1
+            .content
+                h2 Our partnerships with key ‘best in breed’ technology providers <br/>allows Reveal Group to provide the most sophisticated<br/> Intelligent Automation solutions available.
+        <img class="bg-homepage" src="assets/imgs/bg-homepage1.jpg" style="width:100%;height:260px;object-fit: cover;"> 
+        .ss2
+            .list-scroll
+                -for(i=1;i<5;i++)
+                    div(id=`img${i}`).satan-nav
+                        img(src="assets/imgs/scroll-ex-01.png", alt="")
+                .block-fix 
+                    ul
+                        li
+                            a(href="#img1")
+                        li
+                            a(href="#img2")
+                        li
+                            a(href="#img3")
+                        li
+                            a(href="#img4")
+            img(src="./assets/imgs/bg-opacity-white.png", alt="")
+           
+        .ss3
+            h3 Expanding Beyond RPA
+            .owl-carousel.owl-theme.owl-deliver-ss2 
+                .item
+                    h4 Broaden the RPA impact with Human in the Loop
+                    p Attended/Assisted robotic capabilities: 
+                    ul
+                        li Applying a highly secure, dynamic UI to integrate human interactions with the digital workforce
+                        li Can also enable Omni Channel digital services like Chatbots
+                        li Can be embedded into Web Portals to deliver customer-facing automations 
+                        li Facilitates end-to-end back office automation by introducing human ‘steps’ so robots can handle complex decisions
+                .item
+                    h4 Use Machine Learning on business challenges
+                    p  Cognitive Automation. Capabilities to support future automation: 
+                    ul
+                        li AI based Conversational Systems
+                        li Application of ML to access and digitize increasingly unstructured data for robotic consumption
+                        li Accessing the dedicated cognitive innovation labs of our key robotic software vendors to get early introductions to new cognitive functionality 
+                        li IoT specialists and emerging solutions consultants delivering future-proofed results
+                .item
+                    h4 Broaden automation capability with smart data capture
+                    p Attended/Assisted robotic capabilities: 
+                    ul
+                        li Consulting, advisory and data science services to rapidly provide insights and accelerate digital transformation 
+                        li Intelligent Document Processing (IDP) and data capture integration and insights capability on a range of analytic technologies and tools including Hyperscience, Data Robot and Python
+                        li Global pool of experts in structured and unstructured data capture and information governance
+            .height
+        .ss4
+            include ./parts/includes/04-block-frm-include.pug

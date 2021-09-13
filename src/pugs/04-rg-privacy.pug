@@ -1,0 +1,46 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title The Natives - Privacy Policy
+    
+block main-wrapper
+    h1(style="display:none") The Natives - Privacy Policy
+    .wrapper-child.privacy
+        .privacy-flex2.p80
+            .nav 
+                h3 Privacy Policy
+                p How we use your data
+                ul
+                    -for(i=1;i<5;i++)
+                        li 
+                            a(href="#") Placeholder
+            .group-content
+                h2 Privacy Policy
+                p.padd-bot-30 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+                ul 
+                    -
+                        let data1 = [
+                            {li: 'Introduction'},
+                            {li: 'Scope Of This Policy'},
+                            {li: 'Information That You Provide To Us'},
+                            {li: 'Information That We Collect From You on our Websites'},
+                            {li: 'Information Collected From Other Sources'},
+                            {li: 'How We Use Information That We Collect'},
+                            {li: 'Sharing Of Information Collected'},
+                            {li: 'International Transfer of Personal Information'},
+                            {li: 'Other Important Privacy Information'},
+                            {li: 'How to Exercise Your Data Protection Rights'},
+                            {li: 'Children’s Personal Information'},
+                            {li: 'Business Transactions'},
+                            {li: 'Supplemental Terms and Conditions for Certain Regions'},
+                            {li: 'Changes To This Policy'},
+                            {li: 'Contact Us'},
+                            {li: 'English Version Controls'},
+                        ]
+                    for data in data1
+                        li=data.li
+                h2 1. Introduction
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+
+                

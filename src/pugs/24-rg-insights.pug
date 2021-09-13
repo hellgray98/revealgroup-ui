@@ -1,0 +1,94 @@
+extends ./parts/layout.pug
+prepend meta
+    title The Natives - ARTICLE
+    
+block main-wrapper
+    h1(style="display:none") The Natives - ARTICLE 
+    .wrapper-child.insight-page
+        .top-bar 
+            .form-input
+                input(type="text" placeholder="Search")
+                span Search
+            ul
+                li 
+                    a(href="#") Customer Stories
+                li 
+                    a(href="#") Newsroom
+                li 
+                    a(href="#") Events
+                li 
+                    a(href="#") Blog
+                li 
+                    a(href="#") Whitepapers
+                li 
+                    a(href="#") Reveal TV
+            ul
+                li 
+                    a(href="#") Refine by
+                
+            select
+                option Refine by
+                option Customer Stories
+                option Newsroom
+                option Events
+                option Blog
+                option Whitepapers
+                option Reveal TV
+                
+        .hero-flex2
+            .owl-carousel.owl-theme.owl-1-item.news-article
+                +ArticleItem("","NEWS","Title of the featured article","Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts.","Read More","news",'commingsoon.html')
+                +ArticleItem("","EVENT","Title of the featured article","Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts.","Read More","event",'commingsoon.html')
+                +ArticleItem("","WHITEPAPER","Title of the featured article","Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts.","Read More","white",'commingsoon.html')
+            .img
+                img(src="assets/imgs/article01.jpg", alt="")
+        .ss1
+            .title
+                .left 
+                    h3 Newsroom
+                    p Latest media articles and press releases.
+                .right
+                    a(href="#").btn View all
+            -for(i=1;i<3;i++)
+                div(class=`block-article${i}`)
+                    .high-light
+                        +ArticleItem("assets/imgs/story-img1.jpg","NEWS","Title of the featured article","Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts.","Read More","news",'commingsoon.html')
+                    .owl-carousel.owl-theme.owl-4-item.news-article
+                        +ArticleItem("assets/imgs/story-img1.jpg","NEWS","Title of the featured article","Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts.","Read More","news",'commingsoon.html')
+                        +ArticleItem("assets/imgs/story-img1.jpg","NEWS","Title of the featured article","Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts.","Read More","news",'commingsoon.html')
+                        +ArticleItem("assets/imgs/story-img1.jpg","EVENT","Title of the featured article","Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts.","Read More","event",'commingsoon.html')
+                        +ArticleItem("assets/imgs/story-img1.jpg","WHITEPAPER","Title of the featured article","Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts.","Read More","white",'commingsoon.html')
+        .ss2
+            .title
+                .left
+                    h3 Customer Stories  
+                    p You’re in great company. We partner with world-class organisations to leverage best-in-breed capabilities.
+                .right 
+                    a(href="#").btn View All
+                    span.prev-slide
+                    span.next-slide 
+            .owl-carousel.owl-theme.owl-4-item
+                -for(i=1;i<6;i++)
+                    .item.item-casse
+                        img(src="./assets/imgs/suite-item-owl.jpg", alt="")
+                        .content
+                            span CASE STUDY
+                            h4 Company Name
+                            a(href="#") Learn more
+        .ss3 
+            .title
+                .left
+                    h3 Reveal TV
+                    p You’re in great company. We partner with world-class organisations to leverage best-in-breed capabilities.
+            -for(i=1;i<2;i++)
+                div(class=`block-article${i}`)
+                    .high-light
+                        +ArticleItem("assets/imgs/video.jpg","VIDEO","Experts in intelligent automation","","Read More","video",'commingsoon.html')
+                    .owl-carousel.owl-theme.owl-4-item.news-article
+                        +ArticleItem("assets/imgs/video.jpg","VIDEO","Experts in intelligent automation","","Read More","video",'commingsoon.html')
+                        +ArticleItem("assets/imgs/video.jpg","VIDEO","Experts in intelligent automation","","Read More","video",'commingsoon.html')
+                        +ArticleItem("assets/imgs/video.jpg","VIDEO","Experts in intelligent automation","","Read More","video",'commingsoon.html')
+                        +ArticleItem("assets/imgs/video.jpg","VIDEO","Experts in intelligent automation","","Read More","video",'commingsoon.html')
+            .height
+        .ss4                
+            include ./parts/includes/04-block-frm-include.pug                

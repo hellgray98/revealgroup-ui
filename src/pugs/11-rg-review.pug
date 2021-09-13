@@ -1,0 +1,104 @@
+extends ./parts/layout.pug
+prepend meta
+    title The Natives - Review
+    
+block main-wrapper
+    h1(style="display:none") The Natives - Review
+    .wrapper-child.review.roboReview
+        +header('./assets/imgs/robo-mixin.svg','ntelligent code reviews, on demand','#EF4C3E')
+        .ss1
+            h4 PRICING
+            h3 Simple plans hosted in the cloud.<br/>Priced to scale.
+            .owl-carousel.owl-theme.owl-induction-ss3
+                
+                .item
+                    h5 Free
+                    h4 USD 0
+                    p For many automation teams, RoboManager is a mission-critical .
+                    a(href="#").btn Get Started
+                    ul
+                        li Enterprise Heatmap
+                        li Prioritization &apm; Scheduling
+                        li Delivery Tracking
+                        li Program Health Reporting
+                .item
+                    h5 Standard
+                    h4 USD 200
+                    p For many automation teams, RoboManager is a mission-critical .
+                    a(href="#").btn Start Trial
+                    ul
+                        li Enterprise Heatmap
+                        li Prioritization &apm; Scheduling
+                        li Delivery Tracking
+                        li Program Health Reporting
+                .item
+                    h5 Premium
+                    h4 USD 340
+                    p For many automation teams, RoboManager is a mission-critical .
+                    a(href="#").btn Start Trial
+                    ul
+                        li Enterprise Heatmap
+                        li Prioritization &apm; Scheduling
+                        li Delivery Tracking
+                        li Program Health Reporting
+            table
+                tr 
+                    td(style="border: 1px solid #EFF1F1; border-right: 1px solid #D8D8D8;background:#EFF1F1")
+                    td
+                        .item
+                            h5 Free
+                            h4 USD 0
+                            p For many automation teams, RoboManager is a mission-critical .
+                            a(href="#").btn Get Started
+                            ul
+                                li Enterprise Heatmap
+                                li Prioritization &apm; Scheduling
+                                li Delivery Tracking
+                                li Program Health Reporting
+                    td
+                        .item
+                            h5 Standard
+                            h4 USD 200
+                            p For many automation teams, RoboManager is a mission-critical .
+                            a(href="#").btn Start Trial
+                            ul
+                                li Enterprise Heatmap
+                                li Prioritization &apm; Scheduling
+                                li Delivery Tracking
+                                li Program Health Reporting
+                    td
+                        .item
+                            h5 Premium
+                            h4 USD 340
+                            p For many automation teams, RoboManager is a mission-critical .
+                            a(href="#").btn Start Trial
+                            ul
+                                li Enterprise Heatmap
+                                li Prioritization &apm; Scheduling
+                                li Delivery Tracking
+                                li Program Health Reporting
+
+                tr
+                    th(colspan='2') Features
+                    
+                    th
+                    th
+                +tr('Enterprise Heatmap')
+                +tr('Prioritization & Scheduling')
+                +tr('Delivery Tracking')
+                +tr('Production Metrics')
+                +tr('Program Health Reporting')
+                +tr('Integrations (with RPA software)')
+                +tr('Customization')
+                +tr('99.5% uptime SLA')
+                +tr('Premium Support') 
+        include ./parts/includes/07-block-robo-button.pug       
+        .ss4
+            .content-left
+                .content
+                    h4 Explore the whole RoboSuite
+                    p Tools to help every automation team unleash its full potential.
+            .owl-carousel.owl-theme.owl-2-item.robo-item 
+                +roboItem('#F3B45A','AUTOMATE DELIVERY','assets/imgs/auto-reveal02.svg','Instantly creates Blue Prism automation components to best practice standards, for you.')
+                +roboItem('#00A755','IDENTIFY, DELIVER, BENEFIT','assets/imgs/auto-reveal01.svg','A single source of truth to identify, prioritize, deliver and realize benefits from automation, for any RPA tool.')
+

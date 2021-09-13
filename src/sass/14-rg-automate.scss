@@ -1,0 +1,355 @@
+.hero-automate-flex2{ 
+    background: url(../imgs/bg-hero-automate.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 550px;
+    .content{
+        h2{
+            font-size: 50px;
+            color: $white;
+            letter-spacing: -1.4px;
+            font-weight: bold;
+            line-height: 76px;
+        }
+        p{
+            @extend  %share-p;
+            color: $white;
+            margin: 0;
+            font-weight: 500;
+        }
+        .btn{
+            margin-top: 30px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            color: $darkblue2;
+            border: 1px solid $darkblue2;
+            font-size: 14px;
+            font-weight: 600;
+            &:hover{
+                color: $white;
+                background-color: $darkblue2;
+                border: 1px solid $darkblue2;
+
+            }
+        }
+    } 
+    @include respond-to(1024){
+        padding: 40px;
+        justify-content: center;
+        align-items: flex-end;
+        min-height: 460px;
+        .content {
+            
+            text-align: center;
+            h2{
+            
+                font-size: 30px; 
+                letter-spacing: 0.5px; 
+            }
+        }
+      
+    }
+    @include respond-to(768){
+        .content {
+            .btn{ 
+                color: $white;
+                border: 1px solid $white;
+                &:hover{
+                    color: $white;
+                    background-color: $darkblue2;
+                    border: 1px solid $darkblue2;
+    
+                }
+            }
+        }
+    }
+}
+.automate{
+    .ss1{
+        background-color: $background;
+        padding: 130px 130px 65px 130px;
+
+        .flex2{
+            .content{
+                width: 35%;
+
+            }
+            .img{
+                width: 65%;
+            }
+            img{
+                max-width: 100%;
+            }
+        }
+        hr{
+            margin-left: -130px;
+            border: none;
+            border: 1px solid #1E99D5;
+        }
+        @include respond-to(1024){
+            padding: 45px 30px;
+            hr{
+                margin-left: -40px;
+            }
+            .content,.img{
+                width: 100% !important;
+            }
+        }
+    }
+    .ss2{
+        .robo-item{
+            .item{
+                img{
+                    min-height: 100px;
+                }
+                p{
+                    min-height: 100px;
+                    @include respond-to(768){
+                        min-height: 50px;
+                    }
+                }
+            }
+            @include respond-toSP(1024){
+                padding-bottom: 30px;
+            }
+            .owl-dots{
+                .owl-dot{
+                    background-color: #EFF1F1;
+                }
+                .active{
+                    background-color: #0D84C7;
+                }
+            }
+        }
+    }
+    .ss3{
+        background-color: $blue;
+        padding: 50px 0 205px 0;
+        text-align: center;
+       h4{
+            color:$white;
+            @extend %share-p;
+            margin-bottom: 25px;
+            font-size: 13px;
+            font-weight: normal;
+        }
+    
+        h3{
+            @extend %share-h40;
+            color:$white;
+            margin-bottom: 35px;
+        }
+        .height{
+            background-color: $blue;
+           
+        }
+        p{
+            color: $white;
+        }
+        .btn{
+            border: 1px solid $white;
+            color: $white;
+            margin-right:  20px;
+            margin-top: 40px;
+            font-weight: 600;
+            font-size: 14px;
+            &:hover{
+                background-color: $white;
+                color: $blue;
+            }
+        }
+        @include respond-to(1024){
+            padding: 40px ;
+            
+        }
+        
+        @include respond-toSP(1025){
+            .height {
+                display: none;
+            };
+        }
+        @include respond-toSP(1440){
+            .height {
+                display: block;
+            };
+        }
+        @include respond-to(768){
+            padding:40px 40px 150px 40px;
+            h3,h4,p{
+                text-align: left;
+                br{
+                    display: none;
+                }
+            }
+            h3{
+                font-size: 25px;
+                line-height: 30px;
+            }
+            .height{
+                display: none;
+            }
+        }
+    }
+    .ss4{
+      
+        position: relative;
+        padding: 0 90px; 
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 275px;
+        .item{
+            padding: 25px;
+        }
+        .owl-carousel{
+            position: absolute;
+            top: -55%;
+            left: 0;
+            width: 100%;
+            padding: 0 90px;
+        }
+        @include respond-to(1350){
+            min-height: 210px;
+        }
+        @include respond-to(1024){
+            padding:0 40px;
+            
+            .owl-carousel{
+                position: absolute;
+                top: -50%;
+                left: 0;
+                width: 100%;
+                padding: 0 0;
+            } 
+        }
+       
+        @include respond-toSP(1650){
+            min-height: 380px;
+        }
+        @include respond-to(600){
+            .owl-carousel{
+                position: absolute;
+                top: -50%; 
+            } 
+        }
+
+    }
+    .ss5{
+        padding: 0 90px 90px 90px;
+        
+        .flex2{
+            &__left{
+                width: 50%;
+                background-color: $background; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                min-height: 370px;
+                .content{
+                    text-align: center;
+                    padding: 20px;
+                }
+                h4{
+                    text-align: center;
+                    width: 100%;
+                    color: #43413C;
+                    @extend %share-h4;
+                }
+                .btn{
+                    color: $white;
+                    background-color: $darkblue2;
+                    margin-top: 10px;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            }
+            &__right{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                h3{
+                    color: $textblack;
+                    @extend %share-h4; 
+                    margin-bottom: 30px;
+                    line-height: 36px;
+                }
+            }
+        }
+        @include respond-to(1024){
+            padding:25px;
+            .flex2{
+                &__left,&__right{
+                    width: 100%;
+                }
+                &__right{
+                    justify-content: flex-start;
+                    padding: 25px;
+                    h3{
+                        font-size: 25px;
+                        font-weight: bold;
+                    }
+                    p{
+                        br{
+                            display: none;
+                        }
+                    }
+                }
+                &__left{
+                    min-height: 240px;
+                    h4{
+                        font-size: 25px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    .ss6{
+        padding: 90px;
+        background-color: $blue;
+        &>h3{
+            @extend %share-h24;
+            color: $white;
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+        @include respond-to(1024){
+            padding: 50px;
+            &>h3{
+                font-size: 20px;
+                font-weight: bold;
+                line-height: 30px;
+                text-align: left;
+            }
+            .item-casse{
+                padding: 0;
+                span{
+                    font-size: 12px;
+                }
+                h4{
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: $textblack;
+                }
+            }
+        }
+        .owl-dots {
+            text-align: left;
+            margin-top: 30px; 
+           .owl-dot{ 
+               background: $background; 
+           }
+           .active{ 
+               background: $grey; 
+           }
+       }
+        
+    }
+}

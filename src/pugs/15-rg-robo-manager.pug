@@ -1,0 +1,86 @@
+extends ./parts/layout.pug
+prepend meta
+    title The Natives - designer
+    
+block main-wrapper
+    h1(style="display:none") The Natives - designer
+    .wrapper-child.rb-manager.roboReview
+        +header('./assets/imgs/robo-manager.svg','A single source of truth to identify, prioritize, deliver and realize benefits from automation, for any RPA tool.','#21B052')
+        .feature-wrapper
+            h4 FEATURES
+            h3 Set up RoboManager<br/> to scale
+            .feature-box
+                .feature-content
+                    p For many automation teams, RoboManager is a mission-critical tool to undertake their work.<br/> With Premium, you can rest easy knowing that RoboManager will scale with customizability, high performance, and support for your organization.
+                .feature-content
+                    h5 Customize and Personalize
+                    p RoboManager is designed to be flexible. It works right out of the box, or it can be configured to your preferences. Customize a workflow or use your own delivery artifacts. Any way you use it, RoboManager has the flexibility to fit your automation team’s needs.
+                .feature-content
+                    h5 99.5% Uptime SLA
+                    p Around the clock 99.5% uptime SLA, backed with service level credits so you never have to worry whether your automation lifecycle tool is up.
+                .feature-content
+                    h5 99.5% Uptime SLA
+                    p Get 24/7 support with one-hour response times for critical issues with experts on-hand to help you take care of challenges as they arise.
+        .ss1
+            h4 PRICING
+            h3 Simple plans hosted in the cloud.<br/>Priced to scale.
+            .calculator-flex2
+                .left
+                    h4 Price Calculator
+                    p Subscription
+                    .select
+                        select
+                            option(value="1") PREMIUM
+                            option(value="2") FREE
+                            option(value="3") STANDARD
+                    .box-flex2
+                        .number
+                            p How many users?
+                            input(type="number" id='numberRanger' value='1')
+                        .ranger
+                            p Compare users below?
+                            input(type="range", min='1' max='200' id='ranger' value='1')
+                            span
+                            span
+                            span
+                            span
+                            span
+
+                .right
+                    .item
+                        .price
+                            span $10 USD
+                            span /mo.
+                        p Flat rate for 1 — 5 Users
+                        a(href="#").btn Order Now
+            .pay-flex2
+                .pay
+                    p Pay per user, with tiered discounts for more than 100 users.
+                    a(href="#").btn Need Help? Speak to an Expert
+                 
+            table
+                 
+                tr
+                    th Feature Comparison
+                    th Free
+                    th Standard
+                    th Premium
+                +tr('Enterprise Heatmap')
+                +tr('Prioritization & Scheduling')
+                +tr('Delivery Tracking')
+                +tr('Production Metrics')
+                +tr('Program Health Reporting')
+                +tr('Integrations (with RPA software)')
+                +tr('Customization')
+                +tr('99.5% uptime SLA')
+                +tr('Premium Support') 
+        include ./parts/includes/07-block-robo-button.pug       
+        .ss4
+            .content-left
+                .content
+                    h4 Explore the whole RoboSuite
+                    p Tools to help every automation team unleash its full potential.
+            .owl-carousel.owl-theme.owl-2-item.robo-item 
+                +roboItem('#F3B45A','AUTOMATE DELIVERY','assets/imgs/auto-reveal02.svg','Instantly creates Blue Prism automation components to best practice standards, for you.','hover-yellow')
+                +roboItem('#DA4039','AUTOMATE CODE REVIEWS','assets/imgs/auto-reveal03.svg','A proactive self-service check of your Blue Prism code quality so you get continuous, real-time feedback.','hover-red')
+

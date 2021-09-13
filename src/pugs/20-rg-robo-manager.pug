@@ -1,0 +1,56 @@
+extends ./parts/layout.pug
+prepend meta
+    title The Natives - MANAGER
+    
+block main-wrapper
+    h1(style="display:none") The Natives - MANAGER 
+    .wrapper-child.manager-page
+        +secondNav("./assets/imgs/manager01.svg","#21B052",'Onboarding','Premium','')
+        +header('./assets/imgs/robo-manager.svg','A single source of truth to identify, prioritize, deliver and realize benefits from automation, for any RPA tool.','#21B052','none')
+        .ss1
+            +roboSpace("#21B052",'End-to-end, real-time visibility of your RPA program','','The best automation teams deliver quality automations, quickly!')
+        .mix-ss-mix-item
+            .owl-carousel.owl-theme.owl-4-item
+                +itemSlide("./assets/imgs/block-suite.png","#21B052","Identify","Comprehensive templates to solicit automation opportunities across your entire company.")
+                +itemSlide("./assets/imgs/block-suite01.png","#21B052","Build","Auto-generate the work plan and track progress with confidence knowing your data is always up to date.")
+                +itemSlide("./assets/imgs/block-suite03.png","#21B052","Prioritize","Prioritize your automation opportunities in the context of your entire program.")
+                +itemSlide("./assets/imgs/block-suite.png","#21B052","Realize","Measure, validate and realize program benefits using real-time, visual data.")
+                
+           
+        +mixRoboSS1("#21B052","Accelerate your team’s ability to automate at scale RoboManager empowers enterprises with built-in methodology, visibility and controls. Deliver quality automations with speed and agility.","Our Customer Success team provides Onboarding Services. Our tailored guidance, support, and training ensure you get the most from RoboManager.","Onboarding","Pricing","Premium","","")
+        +mixRoboSS2('#21B052',
+                    'Automate with ease',
+                    'Whether you’re a seasoned automation expert, or just getting started, RoboManager unlocks the power and value of intelligent automation.',
+                    './assets/imgs/designer02.jpg','Plentiful Pipeline',
+                    'Use RoboManager’s heat map feature to find where to look for the best automation opportunities. Keep track of pipeline health in real-time to meet program goals.',
+                    './assets/imgs/designer03.jpg','Accurate Estimations',
+                    'Use our proven sizing technique to project the true cost of automating. Understand the processes that yield the biggest benefits.',
+                    './assets/imgs/designer04.jpg','Value-Driven Prioritization',
+                    'Sequence processes in your delivery pipeline with easy filtering and sorting. Ensure processes that deliver the most value are always at the top.',
+                    3
+        )
+        .ss2 
+            h3 PRICING
+            h4 Simple plans hosted in the cloud. Priced to scale.
+            p We’ve combined the power of RoboDesigner and RoboReview into a single, unified offering. It’s easy to set up, easy to use and it’s priced for companies of all sizes to benefit.
+            ul
+                li RoboManager
+                li.active ROBODESIGNER + ROBOREVIEW
+                li FULL SUITE
+            .owl-carousel.owl-theme.owl-landing-mobie-ss5.blue-prism.mixin-extent
+                +extensive("#21B052","", "","Small Teams","1-9 users","$340","Try Free For 14 Days","lagre","small","Buy Now")
+                +extensive("#21B052"," most-extent", "RECOMMENDED","Growing Teams","Foundation Training Course ","$300","Enquire Now","lagre","small")
+                +extensive("#21B052","", "","Larger Teams","20-29 users","$250","Enquire Now","lagre","small",'','40px 40px 56px 40px') 
+            
+            +extent-block2('#21B052')
+        
+        +extent-block3('assets/imgs/manager02.jpg','Automation teams of all shapes and sizes love RoboManager','RoboManager is a one-stop-shop for our people, process data and documentation that contribute to delivering quality automations. It provides everyone with a common approach and is a single source of truth for our automation program.','RPA Director, Leading Financial Services Company','#21B052')
+        +mixRoboSS1("#21B052","Place holder In the 32 minute RoboDesigner™ course, learn how to use our tool to accelerate the repeatable development of high-quality Blue Prism objects.","","Sign up for Training","","","hidden","hidden")
+        .extent-block5
+            .content-left
+                .content
+                    h4 Explore the<br/> whole RoboSuite
+                    p Tools to help every automation team unleash its full potential.
+            .owl-carousel.owl-theme.owl-2-item.robo-item 
+                +roboItem('#F3B45A','AUTOMATE DELIVERY','assets/imgs/auto-reveal02.svg','Instantly creates Blue Prism automation components to best practice standards, for you.')
+                +roboItem('#DA4039','AUTOMATE CODE REVIEWS','assets/imgs/auto-reveal03.svg','A proactive self-service check of your Blue Prism code quality so you get continuous, real-time feedback.')

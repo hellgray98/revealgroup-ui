@@ -1,0 +1,353 @@
+footer{
+    padding:40px;
+    @include respond-to(768){
+        padding: 25px;
+    }
+    *{
+        color:$white
+    }
+    background-color:  #42464A;
+    .footer-d-flex{
+        padding-bottom: 69px;
+        @include respond-to(1024){
+            padding-bottom: 30px;
+        }
+        @include respond-to(768){
+            padding-bottom: 0;
+        }
+        .left{
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            width: 40%;
+            h3{
+                font-size: 14px;
+                color:$white;
+                line-height: 20px;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+            
+            li{
+                a{
+                    font-weight: 500;
+                    color:$white;
+                    font-size: 13px;
+                    line-height: 20px;
+                    text-decoration: none;
+                }
+             
+            }
+            .left2{
+                li:last-child{
+                    margin-top: 10px;
+                    a{
+                        font-weight: 600;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .left3{
+                li{
+                    margin-bottom: 12px;
+                    a{
+                        font-weight: 600;
+                        font-size: 14px;
+                    }
+                }
+                
+            }
+            @include respond-to(1024){
+                justify-content: flex-start;
+                .nextElement{
+                    max-height: 0px;
+                    overflow: hidden;
+                    [class*=left]{
+                        padding: 20px;
+                        border-bottom: 1px solid #D8D8D8;
+                    }
+                }
+            }
+            @include respond-to(768){
+                width: 100%;
+                li{
+                    padding: 5px 50px
+                }
+                
+            }
+            
+            .group-menu{
+                
+                padding: 0 20px;
+                button{
+                   display: none;
+                }
+                @include respond-to(1024){
+                    width: 100%;
+                    padding: 0 30px 0 0;
+                    h3{
+                        display: none;
+                    }
+                    button{
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        text-align: left;
+                        padding:20px;
+                        background-color: transparent;
+                        border-bottom: 1px solid #979797;
+                        font-weight: 600;
+                        font-size: 16px;
+                        &::after{
+                            content: url(../imgs/icons/arrow-down.svg);
+                            position: absolute;
+                            right: 20px;
+
+
+                        }
+                    }
+                } 
+                @include respond-to(768){
+                    padding: 0;
+                }
+         }
+
+        }
+
+        .right{
+            @include respond-toSP(768){
+                hr.block{
+                    display: none;
+                }
+            }
+            @include respond-to(768){
+                hr.block{
+                    display: block;
+                }
+            }
+            width:60%;
+            
+            hr{
+                margin: 30px 0;
+                border: none;
+                border-bottom: 1px solid #979797;
+                @include respond-to(1024){
+                    margin: 14px 0;
+                }
+                @include respond-to(768){
+                    margin: 30px 0;
+                }
+            }
+            
+            
+            @include respond-to(768){
+                width: 100%;
+                justify-content: space-between;
+                margin-top: 50px;
+                .form-email-d-flex{
+                    padding :0 40px;
+                    h3{
+                        margin-bottom: 10px;
+                    }
+                     
+                }
+            }
+        }
+    }
+    .list-branch-d-flex{
+        .item{
+            width: 20%;
+            padding-right: 30px;
+            button{
+                display: none;
+            }
+            h4{
+                margin-bottom: 30px;
+                font-weight: 600;
+                font-size: 14px;
+            }
+            .nextElement{
+                p{
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+            }
+            @include respond-to(1024){
+
+                width: 100%;
+                padding-right: 0;
+                h4{
+                    display: none;
+                }
+                .nextElement{
+                    max-height: 0;
+                    overflow: hidden;
+                    
+                }
+                p{
+                    padding: 30px;
+                    border: 1px solid white;
+                }
+                button{
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    text-align: left;
+                    padding:15px;
+                    background-color: transparent;
+                    font-weight: 600;
+                    font-size: 14px;
+                    // border-bottom: 1px solid #D8D8D8;
+                    &::after{
+                        content: url(../imgs/icons/arrow-down.svg);
+                        position: absolute;
+                        right: 20px;
+
+
+                    }
+                }
+            } 
+            @include respond-to(768){
+                padding-right: 0;
+                button{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+.form-email-d-flex{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .left-item,.right-item{
+        width: 50%;
+        @include respond-to(768){
+            width: 100%;
+        }
+    }
+    .left-item{
+        h3{
+            font-size: 14px;
+            font-weight: 600;
+        }
+        p{
+            font-size: 12px;
+            margin: 0;
+            @include respond-to(768){
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .right-item{
+        position: relative;
+        input{
+            width: 90%;
+            font-size:13px;
+            outline:none;
+            border: 1px solid $white;
+            padding: 13px 20px;
+            border-radius: 30px;
+            background-color: transparent;
+            
+            @include respond-to(768){
+              
+                width: 100%;
+              
+            }
+        }
+        input::placeholder{
+            color:$white
+        }
+        .btn{
+            background-color: $blue;
+            color:$white;
+            position: absolute;
+            padding:13px 30px;
+            top:1px;
+            right: 0px;
+            font-size: 13px;
+            text-transform: uppercase;
+            &:hover{
+                background-color: $textblack;
+            }
+            @include respond-to(768){
+                position: unset;
+                width: 100%;
+                margin: auto;
+                margin-top: 15px;
+                padding:13px 30px
+            }
+        }
+        
+    }
+}
+.copy-right{
+    background: #42464A;
+    overflow: hidden;
+    position: relative;
+    @include respond-to(768){
+        padding: 10px 10px;
+    }
+    .list-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        @include respond-to(768){
+            flex-direction: column-reverse;
+        }
+    }
+    .item3{
+        padding-left: 20px;
+        li{
+            font-size: 10px;
+        }
+    }
+    .item2{
+        padding-left: 20px;
+        li{
+            font-size: 12px;
+            a{
+                font-weight: 600;
+            }
+        }
+    }
+    [class*=item]{
+        display: flex;
+        justify-content: space-around;
+        li{
+            padding: 0 10px 0 0;
+            a{
+                text-decoration: none;
+                color: #EFF1F1;
+            }
+            @include respond-to(768){
+                padding: 0;
+            }
+        }
+    }
+    @include respond-to(768){
+        .item2{
+            width: 60%;
+            justify-content: space-between;
+            padding: 0;
+            margin-bottom: 40px;
+            li{
+                font-size: 12px;
+            }
+        }
+        .item3{
+            width: 100%;
+            justify-content: space-between;
+            padding: 0;
+            li{
+                font-size: 9px;
+            }
+        }
+    }
+
+}

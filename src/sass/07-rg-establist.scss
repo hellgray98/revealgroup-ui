@@ -1,0 +1,319 @@
+.establist-hero{
+    background-color: $darkblue;
+}
+.bg-homepage{
+    margin-bottom: -4px;
+}
+.establist{
+    #ss1{
+        background-color: $background;
+        padding:100px 80px 80px 80px;
+        h2{
+           @extend %share-h13;
+           color:$darkblue;
+           margin: 30px 0; 
+        } 
+        &>h3{
+            @extend %share-h40;
+        }
+        hr{
+            border: none;
+            border-bottom: 1px solid $darkblue;
+        }
+        .content{
+            width: 65%;
+            
+            padding:30px 0;
+            h3{
+                @extend %share-h24;
+                margin: 20px 0;
+            }
+        }
+        .img{
+            width: 30%;
+            
+            img{
+                width: 100%;
+
+            }
+        }
+        .flex2{
+            padding: 40px 0;
+        }
+        @include respond-to(1024){
+            padding:140px 40px 40px 40px;
+            .img,.content{
+                width: 100%;
+                margin: 60px 0;
+            }
+            hr{
+                margin-right: -40px;
+            }
+          
+            .flex2{
+                margin: 0 0;
+            }
+        }
+
+    }
+    #ss2{
+        background-color: $blue;
+        padding:50px 100px;
+        .owl-dots {
+            text-align: left;
+            margin-top: 0;
+            padding-bottom: 40px;
+            .owl-dot{ 
+                background: $white; 
+            }
+            .active{ 
+                background: $textblack; 
+            }
+        }
+        &>h3{
+          @extend %share-h13;
+          color: $white;
+          text-align: center;  
+        }
+        &>h2{
+            text-align: center;
+            color: $white;
+            @extend %share-h4;
+        }
+        .component-d-flex{
+            justify-content: center;
+            align-items: center;
+        }
+        .item{
+            padding:30px;
+            width: 33%;
+            min-height: 250px;
+            ul{
+                width: 90%;
+            }
+            li{
+                color: white;
+                @extend %share-p;
+                margin-bottom: 10px;
+                list-style-type: disc;
+                list-style-position: inside;
+            }
+            .img{
+                text-align: center;
+                margin-bottom: 25px;
+            }
+            img{
+                width: auto;
+                margin: auto;
+            }
+        }
+        .owl-landing-mobie-ss5{
+            display: none;
+        } 
+        @include respond-to(1024){
+            .component-d-flex{
+                display: none;
+            }
+           .owl-landing-mobie-ss5{
+               display: block;
+           } 
+           .item{width: 100%;}
+           
+        }
+        
+    }
+    #ss3{
+        padding: 80px;
+        .owl-dots {
+            text-align: left;
+            margin-top: 0;
+            padding-bottom: 40px;
+            .owl-dot{ 
+                background: $background; 
+            }
+            .active{ 
+                background: $darkblue; 
+            }
+        }
+        .owl-landing-mobie-ss5{
+            display: none;
+        } 
+        &>h3{
+            @extend %share-h4;
+            color:$textblack;
+            text-align: center;
+        }
+        &>h4{
+            @extend %share-h13;
+            text-align: center;
+        }
+        %item{
+            padding: 30px;
+            margin-bottom: 70px;
+            position: relative;
+            width: 48%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 0px 20px rgba(183, 183, 183, 0.5);
+            min-height: 250px;
+            border-top-left-radius:30px ;
+            border-top-right-radius:30px ;
+            h3{
+                height: 65px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @extend %share-h4;
+                color: white;
+                background-color: $blue;
+                border-radius: 30px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 0;
+                width: 100%;
+
+            }
+            p{
+                margin-top: 50px;
+            }
+        }
+        .owl-landing-mobie-ss5{
+            .item{
+                @extend %item;
+                width: 100%;
+            }
+        }
+        .bfs-left{
+            width: 70%;
+            justify-content: space-between;
+           .item{
+            @extend %item
+           }
+        }
+        .bfs-flex2{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px; 
+        }
+        .bfs-right{
+            width: 27%;
+            .item{
+                padding:20px;
+                background-color: $blue;
+                border-radius: 15px;
+                margin-bottom: 30px;
+            }
+            min-height: 320px;
+            h4{
+                color:$white;
+                font-size: 20px;
+                font-weight: bold;
+                margin: 25px 0;
+            }
+            li{
+                color:$white;
+                font-size: 18px;
+                font-weight: bold;
+                list-style-type: decimal;
+                list-style-position: inside;
+                margin-bottom: 10px ;
+            }
+
+        }
+        .bfs{
+            display: flex;
+            justify-content: flex-start;
+
+
+        }
+        @include respond-to(1024){
+            padding: 40px 20px;
+            .bfs-d-flex,.desktop{
+                display: none;
+            }
+           .owl-landing-mobie-ss5{
+               display: block;
+           } 
+           .bfs-flex2{
+                .bfs-left,.bfs-right{
+                    width: 100%;
+                }
+           }
+           
+           .item{width: 100%;}
+           
+        }
+    }
+    #ss4{
+        background-color: $background;
+        padding: 100px 80px;
+        .img,.content{
+            width: 50%;
+        }
+        .program-flex2{
+            justify-content: center;
+            align-items: center;
+        }
+        h3{
+            @extend %share-h4;
+            color:$textblack;
+
+        }
+        p{
+            width: 90%;
+        }
+        .img{
+            img{
+                max-width: 100%;
+            }
+        }
+        @include respond-to(1024){
+            padding: 80px 60px;
+            .img,.content{
+                width: 100%;
+            }
+            .content{
+                margin-top: 30px;
+            }   
+        }
+    }
+    
+    #ss5{
+        padding-bottom: 100px;
+        background-color: $background;
+        @include respond-toSP(1024){
+            .img{
+                width: 55% !important;
+            }
+            .content{
+                width: 45% !important;
+            }
+        }
+        @include respond-to(1024){
+            padding-top: 240px;
+            padding-bottom: 0;
+            .img{
+                display: none;
+            }
+        }
+        h4{
+            color: $blue;
+            @extend %share-h13;
+        }
+        h3{
+            color: $textblack;
+            @extend %share-h40; 
+            margin: 40px 0;
+        }
+        .btn{
+            color:$white;
+            background-color: $blue;
+            margin-top: 45px;
+        }
+    }
+    #ss6{
+        position: relative;
+    }
+}

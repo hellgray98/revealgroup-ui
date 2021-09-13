@@ -1,0 +1,116 @@
+.expand-hero{
+    background-color: $darkred;
+}
+.expand{
+    .ss1{
+        min-height: 400px;
+        padding: 0 150px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .content{
+            padding:50px;
+        }
+        h2{
+            @extend %share-h40;
+            color: $textblack;
+            margin-top: 80px;
+        }
+        @include respond-to(1024){
+            padding: 0px;
+            .content{
+                width: 100%;
+            }
+        }  
+    }
+    .ss2{
+        position: relative;
+        padding:100px;
+        .satan-nav img{
+            max-width: 100%;
+        }
+        .list-scroll{
+            &::-webkit-scrollbar { 
+                display: none;  /* Chrome Safari */
+            }
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE 10+ */
+            overflow-y:scroll;
+            overflow-x:hidden;
+            height: 700px;
+            text-align: center;
+           
+        }
+        &>img{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        @include respond-to(1024){
+            padding: 40px;
+            .list-scroll{
+                height: 400px;
+            }
+        }
+        @include respond-to(600){
+            .list-scroll{
+                height: 250px;
+            }
+        }
+    }
+    .ss3{
+        background-color: $background;
+        padding: 100px;
+        h3{
+            @extend %share-h4;
+            color:$textblack;
+            text-align: left;
+            margin: 20px 0;
+        }
+        h4{
+            font-size: 22px ;
+            font-weight: bold;
+            color: $darkred;
+            margin: 20px 0;
+        } 
+        p{
+            color: $darkred;
+            @extend %share-p;
+            font-size: 18px;
+            margin: 20px 0;
+            min-height: 40px;
+        }
+
+        li{
+            list-style-type: disc;
+            list-style-position: inside;
+            @extend %share-p;
+            margin-bottom: 10px;
+        }
+        .owl-dots {
+            text-align: left;
+            margin-top: 0;
+            padding-bottom: 40px;
+           .owl-dot{ 
+               background: $white; 
+           }
+           .active{ 
+               background: $darkred; 
+           }
+       }
+       @include respond-to(1024){
+            .height{ 
+                display: none;
+            }
+            padding: 40px;
+            h4{
+                font-size: 16px;
+            }
+        }
+    }
+    .ss4{
+        position: relative; 
+    }
+}

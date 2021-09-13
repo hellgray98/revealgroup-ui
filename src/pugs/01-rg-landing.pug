@@ -1,0 +1,72 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title The Natives - RG TRAINING LANDING PAGE
+    
+block main-wrapper
+    h1(style="display:none") The Natives - RG TRAINING LANDING PAGE
+    .wrapper-child.landing
+        include ./parts/includes/05-block-landing.pug
+        include ./parts/includes/06-block-include-landing-ss1.pug
+        .ss2
+            h3 FEATURES AND BENIFITS
+            .list-collapse.pr-collapse
+                -for(i=1;i<7;i++)
+                    .collapses
+                        button.collapsible.btn
+                        .content
+                            p Our trainers and ongoing delivery leads / coaches are specialists, all are highly experienced Blue Prism practitioners and utilise their real-world experience to bring the training material to life.
+                        h3 Custom Course<br/> Development
+            .list-collapse
+                .owl-carousel.owl-theme.owl-landing-mobie
+                    -for(i=1;i<7;i++)
+                        .collapses.item
+                            button.collapsible.btn
+                            .content
+                                p Our trainers and ongoing delivery leads / coaches are specialists, all are highly experienced Blue Prism practitioners and utilise their real-world experience to bring the training material to life.
+                            h3 Custom Course<br/> Development
+        .ss3
+            .owl-carousel.owl-theme.owl-landing-mobie-ss3
+                - 
+                    let dataLandingPage = [
+                                {number:'200+',title:'trained'},
+                                {number:'150+',title:'client teams upskilled'},
+                                {number:'40+',title:'courses developed'},                                
+                                ]
+                
+                for landing in dataLandingPage
+                    .item
+                        h3=landing.number
+                        p=landing.title
+        .ss4
+            .block-training
+                .content
+                    h3 TRAINING
+                    h4 Steps to Success
+                    p Reveal Group was established in 2005 with the purpose of delivering technology-driven, innovative consulting services that accelerate change, reduce costs, increase productivity and improve the overall performance of our clients around the world. 
+                .owl-carousel.owl-theme.owl-landing-mobie-ss4
+                    -for(i=1;i<5;i++)
+                        //if class = item1 => visible after circle else hidden
+                        div(class=`item item${i}`)
+                            .content
+                                .img
+                                    img(src="./assets/imgs/slide-landing-ss5.jpg", alt="")
+                                span=`0${i}.`
+                                h3 Foundation Training Course
+                                p One week introductory course to give an overview of the software and concepts – the perfect way to kick-start your Blue Prism journey.
+        .ss5
+            .title
+                h3 COURSES
+                h4 Ready to Become a Blue Prism Developer?
+                p We’ve combined the power of RoboDesigner and RoboReview into a single, unified offering.<br/>It’s easy to set up, easy to use and it’s priced for companies of all sizes to benefit.
+            .owl-carousel.owl-theme.owl-landing-mobie-ss5.blue-prism.mixin-extent
+                +extensive("#14709C","", "","Blue Prism","Introduction Course ","$100","Enrol Now","small","lagre")
+                +extensive("#14709C"," most-extent", "MOST EXTENSIVE","Blue Prism","Foundation Training Course ","$1750","Enrol Now","small","lagre")
+                +extensive("#14709C","", "","Blue Prism","Surface Automation Training Course","$750","Enrol Now","small","lagre")    
+        .ss6                
+            include ./parts/includes/04-block-frm-include.pug
+
+
+
+
+

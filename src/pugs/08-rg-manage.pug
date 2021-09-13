@@ -1,0 +1,85 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title The Natives - MANAGE
+    
+block main-wrapper
+    h1(style="display:none") The Natives - MANAGE
+    .wrapper-child.manage
+        .block-fix
+            ul
+                li
+                    a(href="#ss2")
+                li
+                    a(href="#ss3")
+               
+        .common-hero.manage-hero
+            .induction-flex2
+                .content
+                    h2 Manage
+                    p Transform the enterprise so digital workers<br/> Operate seamlessly with human workers
+                    a(href="#").btn Learn more  
+                .img
+                    img(src="./assets/imgs/img-induction.jpg", alt="")
+        .ss1
+            .content
+                h2 Managed Services
+                p Reveal Group offers flexible intelligent automation Managed Services to free you up to focus on future RPA development, instead of support and maintenance.
+        <img class="bg-homepage" src="assets/imgs/bg-homepage1.jpg" style="width:100%;height:260px;object-fit: cover;">
+        .ss2
+            h3 Our Managed Services are designed with flexibility in mind.<br/> Customers can tailor the service to their organizational needs, <br/>supporting all elements implemented during the delivery phase.
+            p Choose from a flexible suite of Managed Services packages. Each is individually tailored to integrate<br/> seamlessly with any CMS, the cloud, your existing IT systems and processes.
+        .ss3
+            .items-flex2
+                .item
+                    h3 Features
+                    ul
+                        li 24/7 service available
+                        li First, second- and third-line support available
+                        li Support for multiple vendor environments, including Blue Prism and UiPath
+                        li Built on proven scalable and resilient technology
+                        li Includes full testing through to UAT plans and scenarios
+                        li Can be used to supplement in-house RPA teams
+                .item
+                    h3 Benefits
+                    ul
+                        li Enables you to focus on future RPA development over support.
+                        li Provides a new level of assurance to the organisation.
+                        li Allows you to grow RPA without the people overhead.
+                        li Can be scaled as the organisation grows.
+                        li Ensures that all future projects will be supported post-project.
+                        li Unifies the way RPA is supported across the organisation.
+            p As Intelligent Automation programs scale, they extend to incorporate new,<br/> emerging and maturing technologies. Reveal Group’s managed service offerings allow clients to achieve this with ease.
+        .height
+        .ss4
+            .induction-flex2.block-induction
+                .content
+                    h4 Deployment Support
+                    p Deployment Support allows organizations to ensure they are fully supported <br/>post-project delivery with a comprehensive range of services.
+                    p You may want support 24/7, during office hours or just now and then. Tell us what you need<br/> and we’ll design a package that suits you:
+                    .deployment
+                        -for(i=1;i<3;i++)
+                            .item.block-deliver
+                                .content
+                                    h3 Support
+                                    p Unlimited support, troubleshooting and fault resolution.
+                            .item.block-deliver
+                                .content
+                                    h3 Maintenance
+                                    p Continual monitoring to maintain and enhance reliability, We investigate and resolve issues, apply updates and deploy patches to make processes more robust.
+                    .owl-carousel.owl-theme.owl-deliver-ss2 
+                        -for(i=1;i<3;i++)
+                            .item.block-deliver
+                                .content
+                                    h3 Support
+                                    p Unlimited support, troubleshooting and fault resolution.
+                            .item.block-deliver
+                                .content
+                                    h3 Maintenance
+                                    p Continual monitoring to maintain and enhance reliability, We investigate and resolve issues, apply updates and deploy patches to make processes more robust.
+                .img
+                    img(src="./assets/imgs/img-induction.jpg", alt="")
+        .ss5
+            img(src="./assets/imgs/manage-support.png", alt="")
+        .ss6
+            include ./parts/includes/04-block-frm-include.pug

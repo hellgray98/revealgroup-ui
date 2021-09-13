@@ -1,0 +1,310 @@
+.hero-landing{
+    background-color: $darkblue;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 630px;
+    padding:80px;
+    padding-top: 120px;
+    @include respond-to(1024){
+        padding-top: 100px;
+    }
+    .content{
+        width: 80%;
+        h2{
+            font-size: 50px;
+            font-weight: bold;
+            letter-spacing: -1.4px;
+            line-height: 45px;
+            color:$white;
+            margin-bottom: 60px;
+        }
+        h4{
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: -0.84px;
+            color:$white;
+            margin-bottom: 30px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 21px;
+            color:$white;
+            letter-spacing: -0.45px;
+            margin-bottom: 30px;
+        }
+        .btn{
+            font-weight: bold;
+            color:$blue;
+            background-color: $white;
+        }
+        @include respond-to(768){
+            width: 100%;
+            h2{
+                font-size: 25px;
+                line-height: 50px;
+                letter-spacing: -0.7px;
+                margin-bottom: 30px;
+            }
+            h4{
+                font-size: 18px;
+                line-height: 22px;
+                letter-spacing: -0.5px;
+
+            }
+            p{
+                font-size: 14px;
+                line-height: 21px;
+                letter-spacing: -0.39px;
+            }
+            .btn{
+                font-size: 14px;
+            }
+        }
+    }
+    img{
+        
+        position: absolute;
+        right: 90px;
+        top: 40%;
+        transform: translate(0, -50%);
+        @include respond-to(850){
+            display: none;
+        }
+
+    }
+} 
+.landing{
+    .ss2{
+        position: relative;
+        background-color: $background;
+        padding: 70px;
+        @include respond-to(1024){
+            padding-top:270px;
+        }
+        &>h3{
+            font-size: 13px;
+            color: $darkblue;
+            font-weight: bold;
+            line-height: 18px;
+            letter-spacing: 1px;
+            margin-bottom: 70px;
+            @include respond-to(768){
+                margin-top: 70px;
+            }
+        }
+        
+        .list-collapse{
+            
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &>h3{
+                font-size: 40px;
+                font-weight: bold;
+                letter-spacing: -1px;
+                margin-bottom: 40px;
+            }
+            .content{
+                max-height: 0px;
+                overflow: hidden;
+                
+                p{
+                    font-size: 16px;
+                    line-height: 21px;
+                    margin-bottom: 30px;
+                }
+            }
+            .btn{
+               width: 120px;
+               background-color: $darkblue;
+               height: 40px;
+               color: $white;
+            }
+            .collapses{
+                display: flex;
+                 flex-direction: column-reverse;
+                width: 33%;
+                margin-bottom: 70px;
+                &>.btn::before{
+                    cursor: pointer;
+                    content: 'Explore';
+                }
+                &>.active::before{
+                    cursor: pointer;
+                    content: 'Close';
+                } 
+            }
+            .owl-landing-mobie{
+                @include respond-toSP(768){
+                    display: none;
+                }
+                .collapses{
+                    width: 100%;
+                }
+                h3{
+                    font-size: 30px;
+                    line-height: 40px;
+                    font-weight: bold;
+                    letter-spacing: -0.5px;
+                    margin-bottom: 30px;
+                }
+            }
+            .owl-dots {
+                 margin-top: 30px;
+                .owl-dot{
+                    width: 10px;
+                    height: 10px;
+                    background: $white;
+                    border-radius: 50%;
+                    margin: 5px;
+                }
+                .active{
+                    width: 10px;
+                    height: 10px;
+                    background: $blue;
+                    border-radius: 50%;
+                }
+              
+            }
+        }
+        .pr-collapse{
+            @include respond-to(769){
+                display: none;
+            }
+        }
+    }
+    .ss3{
+        min-height: 320px;
+        background: url(../imgs/landing2.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:50px;
+        .owl-landing-mobie-ss3{
+            width: 70%;
+            @include respond-to(768){
+                width: 100%;
+            }
+        }
+        h3{
+            font-size: 60px;
+            color: $white;
+            letter-spacing: -1.5px;
+        }
+        p{
+            font-size: 18px;
+            letter-spacing: -0.5px;
+            color:$white;
+        }
+        .owl-dots {
+            margin-top: 30px;
+           .owl-dot{
+               width: 10px; 
+               height: 10px;
+               background: $white;
+               border-radius: 50%;
+               margin: 5px;
+           }
+           .active{
+               width: 10px;
+               height: 10px;
+               background: $blue;
+               border-radius: 50%;
+           }
+         
+        }
+    }
+    .ss4{ 
+        .img{
+            position: relative;
+            &::before{ 
+                background-color: $darkblue; 
+            }
+            &::after{ 
+                background-color: $background; 
+            }
+        } 
+        .item {
+            span{ 
+                color: $blue;
+            } 
+           
+        }
+    }
+    .ss5{
+        position: relative;
+        padding: 80px 100px 200px 100px;
+        background-color: $background;
+        h3{
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 1px;
+            color: $darkblue;
+            margin-bottom: 20px;
+        }
+        h4{
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 40px;
+            text-align: center;
+            letter-spacing: -1.12px;
+            color:$textblack;
+            margin-bottom: 30px;
+        }
+        p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            letter-spacing: -0.448px;
+            color: #333333;
+            margin-bottom: 40px;
+        }
+        
+        @include respond-to(768){
+            padding:50px 40px;
+            .title{
+                h3{
+                    text-align: left;
+                    
+                    font-size: 12px;
+                }
+                h4{
+                    text-align: left;
+                  font-size:24px;
+                  line-height: 28px;  
+                }
+                p{
+                    text-align: left;
+                   font-size: 14px;
+                   line-height: 20px; 
+                }
+            }
+            .item{
+                .content{
+                    border: none;
+                }
+            }
+        }
+        .owl-dots {
+            text-align: center;
+            .owl-dot{
+                background-color: $white;
+            }
+            .active{
+                background-color: $darkblue;
+            }
+        }
+        
+    }
+    .ss6{
+        position: relative;
+    }
+}

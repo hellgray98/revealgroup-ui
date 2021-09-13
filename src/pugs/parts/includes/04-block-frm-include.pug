@@ -1,0 +1,46 @@
+.form-include    
+    .img
+        img(src="assets/imgs/bg-homepage1.jpg")            
+    .form
+        .title
+            h3 Sign up to keep up to date 
+            p Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays.
+        form
+            .group-input-text
+                lable Name
+                input(type="text")
+            .group-input-text
+                lable Email
+                input(type="text")
+            .group-input-text
+                lable Company
+                input(type="text")
+            .group-input-text
+                lable Country
+                input(type="text")
+            h4 Interested in:
+            .group-input
+                .group-input__item
+                    input(type="radio" name="interested" id="services" value="services")
+                    label(for="services") Services
+                .group-input__item
+                    input(type="radio" name="interested" id="products" value="products")
+                    label(for="products") Products
+                
+                .group-input__item
+                    input(type="radio" name="interested" id="careers" value="careers")
+                    label(for="careers") Careers 
+                .group-input-checkbox
+                    input(type="radio" name="interested" id="partnerships" value="partnerships")
+                    label(for="partnerships") Partnerships
+            .group-input
+                
+                .group-input__item
+                    input(type="radio" name="interested" id="other" value="other" )
+                    label(for="other") Other 
+                .clearfix
+                .group-input-text
+                    lable If other please state 
+                    input(type="text" style="width:100%")
+            .clearfix
+            button(type="submit").btn Sign up now

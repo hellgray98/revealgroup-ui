@@ -1,0 +1,233 @@
+.appstore-hero{
+    background-color: $background;
+    .img{
+        @include respond-to(1024){
+            position: absolute;
+            right: 0;
+            width: 70%;
+            bottom: 0!important;
+        }
+        @include respond-to(767){
+            width: 94%;
+            bottom: -75px!important;
+            img{
+                height: 75%;
+            }
+        }
+        @include respond-to(320){
+
+            img{
+                height: 60%;
+            }
+        }
+    }
+    .appstore-content{
+        h2{
+            color: $textblack;
+        }
+        p{
+            color: $textblack;
+            letter-spacing:-0.448px;
+            font-weight: 500;
+            margin: 15px 0 50px 0;
+        }
+    }
+    @include respond-to(768){
+        min-height: 630px;
+    }
+    @include respond-to(767){
+        min-height: 479px;
+        h2{
+            font-size: 25px;
+        }
+    }
+}
+.appstore-application{
+    background-color: $white;
+    padding: 54px 43px 39px 51px;
+    margin-bottom: 37px;
+    h4{
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 25px;
+        color: #334256;
+        padding-bottom: 20px;
+    }
+    p{
+        width: 60%;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.448px;
+        color: #43413C;
+    }
+    li{
+        display: flex;
+        border-bottom: 1px solid #DCDCDC;
+        flex-wrap: nowrap;
+        padding: 35px 0;
+        justify-content: space-between;
+        align-items: center;
+        &:last-child{
+            border:none;
+        }
+        img{
+            width: 9%;
+        }
+        h5{
+            width: 29%;
+            text-align: left;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 25px;
+            color: #334256;
+            @include respond-to(1024){
+                width: 24%;
+            }
+        }
+        p{
+            width: 29%;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.392px;
+            color: #43413C;
+        }
+        .btn{
+            background-color: $blue;
+            color: $white;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            // width: 14%;
+        }
+        .appstore-btn{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 24%;
+            @include respond-to(1024){
+                width: 31%;
+            }
+            @include respond-to(768){
+                width: 40%;
+            }
+            @include respond-to(767){
+                width: 100%;
+            }
+        }
+        @include respond-to(1024){
+            h5{
+                width: 24%;
+            }
+        }
+        @include respond-to(768){
+            display: block;
+            img{
+                width: 20%;
+            }
+            h5{
+                width: 100%;
+            }
+            p{
+                width: 100%;
+            }
+            .btn{
+            }
+        }
+        @include respond-to(767){
+            img{
+                width: 50%;
+                padding-bottom: 20px;
+            }
+            h5{
+                font-size: 16px;
+            }
+            p{
+                margin: 0;
+                padding-bottom: 26px;
+            }
+            .btn{
+                font-size: 13px;
+            }
+        }
+    }
+    @include respond-to(768){
+        p{
+            width: 100%;
+
+        }
+    }
+    @include respond-to(768){
+        padding: 37px 26px 28px 24px;
+        h4{
+            line-height: 30px;
+            font-size: 25px;
+            width: 90%;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
+.appstore{
+    .ss1{
+        background-color: $darkblue;
+        padding: 96px 124px 200px 124px;
+        @include respond-to(1024){
+            padding: 40px;
+        }
+        h3{
+            font-size:34px;
+            line-height: 52px;
+            font-weight: bold;
+            letter-spacing: -0.952px;
+            color: $white;
+            text-align: left;
+            margin: 0;
+            padding: 0 0 75px 0;
+        }
+        .center{
+            margin-bottom: 63px;
+        }
+        @include respond-to(768){
+            padding: 60px 26px 45px;
+            h3{
+                padding: 0 0 25px 0;
+                font-size: 24px;
+            }
+            .center{
+                margin-bottom: 37px;
+            }
+        }
+        @include respond-to(767){
+            padding: 166px 26px 45px;
+        }
+    }
+    .ss2{
+        position: relative;
+        .form-include{
+            form{
+                padding-right: 0;
+            }
+            .group-input-text{
+                width: 33.3%;
+                &:nth-child(3){
+                    display: none;
+                }
+                input:not(#other){
+                    width: 90%;
+                }
+            }
+            .btn{
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+        @include respond-to(1024){
+            display: none;
+        }
+    }
+}

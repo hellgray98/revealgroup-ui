@@ -1,0 +1,97 @@
+.privacy{
+    .privacy-flex2{
+        .nav{
+            width: 20%;
+            border-top: 1px solid $darkblue;
+            padding:20px 0;
+            h3{
+                margin: 0;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 32px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 32px;
+                margin: 0;
+            }
+            li{
+                a{
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 32px;  
+                    color: #000000;
+                    text-decoration: none;
+                }
+                @include respond-to(1024){
+                    display: inline;
+                    padding:10px;margin-bottom: 10px;
+                }
+            }
+            @include respond-to(1024){
+                display: none;
+            }
+          
+        }
+        .group-content{
+            width: 70%;
+            li{
+                list-style-type: decimal;
+                list-style-position:inside;
+                text-decoration: underline;
+                margin-bottom: 10px; 
+            }
+            h2{
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 35px;
+                letter-spacing: -0.84px;
+                color: $textblack;
+                margin: 24px 0;
+                
+            }
+            .padd-bot-30{
+                padding-bottom: 30px;
+            }
+            p{
+                margin: 0;
+                padding-bottom: 10px;
+            }
+            p,li{
+                font-size: 16px;
+                line-height: 24px; 
+                font-weight: 400;
+            }
+    
+    
+        }
+        @include respond-to(1024){
+            .nav,.group-content{
+                width: 100%;
+            }
+            .nav{
+                border: none;
+            }
+            h2{
+                font-size: 25px;
+            }
+            p, li{
+                font-size: 14px;
+            }
+        }
+    }
+    @include respond-to(1024){
+        padding-bottom: 257px;
+    }
+
+}
+.privacy{
+    padding-top: 170px;
+    background-color: $background;
+    @include respond-to(1024){
+        padding-top: 120px;
+    }
+    min-height: 1600px;
+}
+
+            

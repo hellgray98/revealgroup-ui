@@ -1,0 +1,87 @@
+/* 
+ *  Theme variables 
+ */
+$textblack:#2D3D51;
+$white: #FFFFFF;
+$blue:#0D84C7;
+$pink: #E303F7;
+$background: #EFF1F1;
+$grey:#68737A;
+$darkyellow:#F3B45A;
+$darkorange:#E0682F;
+$darkblue:#14709C;
+$darkblue2:#1E99D5; 
+$darkred:#DA4039; 
+$darkred2: #EF4C3E;
+$green:#00A755;
+$green2:#21B052;
+$purple:#7E5C8E;
+$dark: #000000;
+$blue2: #1688C9;
+
+
+
+
+/* 
+ *  Fonts define 
+ */
+ %share-h3{ 
+    font-size: 13px;
+    line-height: 18px; 
+    letter-spacing: 1px;
+    margin-bottom: 10px ;
+    @include respond-to(1024){
+            font-size: 12px;
+          
+     }
+ }
+ %share-h4{
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 50px; 
+    letter-spacing: -0.84px;
+    margin: 20px 0;
+    @include respond-to(1024){ 
+            font-size: 20px; 
+            line-height: 28px;
+     }
+ }
+ %share-p{
+    font-size: 16px;
+    line-height: 22px; 
+    @include respond-to(1024){ 
+        font-size: 14px;
+        line-height: 18px; 
+ }
+}
+%share-h40{
+    font-size: 40px;
+    font-weight: bold;
+    color:$textblack;
+    letter-spacing: -1px;
+    @include respond-to(1024){
+        font-size: 24px;
+        letter-spacing: -0.5px; 
+    }
+}
+%share-h24{
+    font-size: 24px;
+    font-weight: bold;
+    @include respond-to(1024){
+        font-size: 20px;
+    }
+}
+%share-h13{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+@font-face {
+    font-family: 'FaktPro-Normal';
+    src: url('../fonts/FaktPro-Normal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

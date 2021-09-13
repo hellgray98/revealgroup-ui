@@ -1,0 +1,485 @@
+.article-page{
+    margin-top: 120px;
+    .top-bar{
+        background-color: $blue2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 25px 40px;
+       
+        .form-input{
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            span{
+                transition: all 0.5s;
+                margin-left: 20px;
+                color:$white;
+                font-size: 14px;
+                font-weight: bold;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background-color:$white;
+                    height: 2px; 
+                    width: 13px;
+                    bottom: -2px;
+                    left: 15px;
+                    transform: rotate(45deg); 
+                }
+            }
+            
+        }
+        input{ 
+            position: relative;
+            color:$white;
+            font-size: 14px;
+            font-weight: bold;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            border-radius:20px ;
+            transition: all 0.5s;
+            width: 22px;
+            border: 3px solid $white;
+            &::placeholder{
+                color: transparent; 
+            }
+            &:focus {
+                padding: 10px 20px;
+                width: 300px;
+                transition: all 0.5s;
+                border: 1px solid $white;
+                &::-webkit-input-placeholder{
+                    color: $white; 
+                }
+            } 
+            &:focus ~ span{
+                transition: all 0.5s;
+                opacity:0;
+            }
+            
+           
+        }
+        li{
+            display: inline;
+                
+            a{  
+                padding: 10px 20px;
+                font-weight: 600;
+                text-decoration: none;
+                color: $white;
+                
+            }
+        } 
+        select{
+            display: none;
+            font-size: 14px;
+            color: $white;
+            border: none;
+            outline: none;
+            font-weight: bold;
+            background-color: $blue2;
+        }
+        @include respond-to(1024){
+            padding: 15px 25px;
+            select{
+                display: block;
+            }
+            li{
+                display: none;
+            }
+            .form-input {
+                width: 50%;
+                
+                input{ 
+                    
+                    &:focus {
+                        padding: 5px 10px;
+                        width: 100%; 
+                       
+                    } 
+                }
+               
+            }
+        }
+    }
+    .hero-flex2{
+        height: 410px;
+        a{
+            text-decoration: none;
+        }
+        .owl-carousel{
+            padding: 0 90px;
+            width: 45%; 
+            background-color: $background;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img{
+            width: 55%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .news-article{
+            .news,.event,.white{
+                border-top: none;
+                
+            }
+            .item{
+                .content{
+                    h3{
+                        a{
+                            font-size: 30px;
+                            font-weight: bold;
+                            color: $textblack;
+                            text-transform: unset;
+                        }
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                    .end{
+                        a{
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        } 
+        .owl-nav { 
+            position: absolute;
+            bottom: 30%;
+            left: 32%;
+            @include respond-toSP(1024){
+                left: 54%;
+            }
+            @include respond-toSP(1100){
+                left: 50%;
+            }
+            @include respond-toSP(1200){
+                left: 47%;
+            }
+            @include respond-toSP(1300){
+                left: 43%;
+            }
+            
+            @include respond-toSP(1400){
+                left: 41%;
+            }
+            @include respond-toSP(1500){
+                left: 39%;
+            }
+            
+            @include respond-toSP(1600){
+                left: 37%;
+            }
+            @include respond-toSP(1700){
+                left: 35%;
+            }   
+        }
+        .owl-next { 
+            bottom: -50px;
+            left: 100px;
+        }
+        .owl-next { 
+            bottom: -50px;
+            left: 50px;
+        }
+        .content {
+            
+            p{
+                min-height: 90px;
+            }
+            
+        }
+        .end{
+            a{
+                text-decoration: none;
+                text-transform:capitalize;
+                font-size: 13px;
+                color: #4AA4DF;
+                width: 115px;
+                height: 36px;
+                line-height: 36px;
+                text-align: center;
+                border: 1px solid $blue;
+                display: block;
+                border-radius: 30px;
+            }
+        }
+        @include respond-to(1024){
+            height: auto;
+            flex-direction: column-reverse;
+            .img,.owl-carousel{
+                width: 100%;
+            }
+            .owl-carousel{
+                padding: 40px;
+            }
+            .owl-nav { 
+                position: absolute;
+                bottom: 30%;
+                left: 60%;
+            }
+        }
+        @include respond-to(400){
+           .owl-nav {  
+                bottom: 27%; 
+            } 
+        }
+
+    }
+    @include respond-to(1024){
+        margin-top: 100px;
+    }
+    .ss1{
+        a{
+            text-decoration: none;
+        }
+        [class*=block-article]{ 
+            margin-bottom: 20px;
+        }
+        i{
+            font-size: 13px;
+        }
+        h3{
+            
+            a   {
+                font-size: 22px;
+                font-weight: bold;
+                line-height: 33px;
+                color: $textblack;
+            }
+        }
+        .end{
+            a{
+                font-weight: bold;
+                text-decoration: underline;
+                text-transform: uppercase;
+                font-size: 13px;
+            }
+        }
+        .event{ 
+            i{
+                color:$blue
+            }
+            border-top:5px solid $blue;
+        }
+        .news-article{
+            .item{
+                .content{
+                    h3{
+                        margin: 10px 0;
+                        a{
+                            font-size: 22px;
+                            font-weight: bold;
+                            text-transform: unset;
+                            color: $textblack;
+                        }
+                    }
+                    .end{
+                        a{
+                            font-weight: bold;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        .news{
+            i{color:$purple}
+            border-top:5px solid $purple;
+        }
+        .white{
+           i{color:$green}
+            border-top:5px solid $green; 
+        }
+        padding:60px 80px;
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            h3{
+                padding: 0 10px;
+                text-align: left;
+                @extend %share-h24;
+                color:$textblack;
+                font-weight: bold;
+                margin-bottom: 15px;
+                padding: 0 10px;
+            }
+            p{
+                padding: 0 10px ;
+                text-align: left;
+                @extend %share-p;
+                color: black;
+                margin-bottom: 80px;
+    
+            }
+            .right{
+                display: flex;
+                align-items: center;
+            }
+            .btn{
+                margin: 40px 40px 40px 0;
+                color:$blue;
+                border: 1px solid $blue;
+                background-color: transparent;
+                &:hover{
+                    color:$white;
+                    border: 1px solid $white;
+                    background-color: $blue;
+                }
+
+            }
+        }
+        .high-light{
+            margin-bottom: 20px;
+            .item{
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                height: 430px;
+                a{
+                    cursor: pointer;
+                    width: 75%;
+                    height: 100%;
+                }
+            }
+            
+            img{
+                padding: 0 10px;
+                height: 100%; 
+                object-fit: cover; 
+                width: 100%;
+            }
+           
+            .content{
+                background-color: $background;  
+                position: absolute; 
+                height: 100%;
+                right: 10px;
+            }
+            @include respond-toSP(1024){
+                .content{ 
+                    width: 22.5%;   
+                }
+            }
+            @include respond-toSP(1500){
+                .content{ 
+                    width: 23%;   
+                }
+            }
+            @include respond-toSP(1700){
+                .content{ 
+                    width: 23.5%; 
+                }
+            }
+            .content {
+                position: relative;
+                padding: 30px;
+                background-color: #EFF1F1;
+                transition: all 0.5s;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                &>a,&>i {
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+                h3 {
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin: 10px 0;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 19px;
+                    margin-bottom: 20px;
+                }
+                &>a{
+                    position: absolute;
+                    bottom: 30px;
+                    left: 30px;
+                }
+            }
+            
+        }
+        
+        @include respond-to(1024){
+            padding: 30px;
+            .owl-dots { 
+                .owl-dot{ 
+                    background: $background; 
+                }
+                .active{ 
+                    background: $blue; 
+                }
+            }
+            &>a{
+                color:$white;
+                text-align: center;
+                width: 100%;
+                height: 40px;
+                background-color: $blue;
+                line-height: 28px;
+                font-size: 14px;
+                display: block;
+                max-width: 500px;
+                margin: 30px 0;
+                font-weight: bold;
+            }
+            &>p{
+                margin-bottom: 0;
+            }
+            .high-light{
+                display: none;
+            }
+            [class*=block-article]{
+                display: none;
+            }
+            .block-article1{
+                display: block;
+            }
+        }
+        .height{
+            background-color: initial;
+        }
+        .loadmore{
+            text-align: center;
+            a{
+                color:$white;
+                text-align: center; 
+                padding: 10px 20px;
+                height: 40px;
+                background-color: $blue;
+                line-height: 25px;
+                font-size: 14px; 
+                max-width: 500px;
+                margin: 30px 0;
+                font-weight: 600;
+                @include button-hover($blue, $white)
+            }
+        }
+    }
+
+    .ss2{
+        position: relative;
+        .form-include .form{
+            background-color: $background;
+        }
+    }
+    
+}

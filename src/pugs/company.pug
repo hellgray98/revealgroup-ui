@@ -1,0 +1,147 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title The Natives - Company
+    
+block main-wrapper
+    h1(style="display:none") The Natives - Company
+    .wrapper-child.company
+        .hero-company-flex2
+            .img
+                img(src="./assets/imgs/hero-company.jpg", alt="")
+            .hero-content
+                .content
+                    h2 COMPANY
+                    h4 Delivering innovative technology solutions that improve the workforce and better the lives of its people.
+                    p Reveal Group specializes in deploying and scaling Intelligent Process Automation programs. We are revolutionizing Operational Management with innovative software. As employees, we encourage each other to grow and innovate. As a company, we roll up our sleeves to deliver innovative technology solutions that improve the workforce and better the lives of its people.
+                    p Our software is powerful and flexible, built on years of expertise, to enable all businesses to Automate Better™. Even yours.
+        .ss1
+            .induction-flex2
+                .content
+                    h3 INTRODUCTION 
+                    h4 Our Story
+                    p Reveal Group was established in 2005 with the purpose of delivering technology-driven, innovative consulting services that accelerate change, reduce costs, increase productivity and improve the overall performance of our clients around the world. Since then, we’ve enjoyed 15 years of uninterrupted growth to become recognised as an international leader in Operational Intelligence tools. 
+                    p Australian-founded, US-headquartered, with locally based teams across Asia Pacific and North America; Reveal Group’s experts are drive rapid, sustainable change across all service industries.
+                    h3 OUR FOCUS
+                    h5  Optimizing human performance in the digital era.
+                .img
+                    img(src="./assets/imgs/img-induction.jpg", alt="")
+        .ss2
+            .scroll
+                -for(i=1;i<5;i++)
+                    .timeline-flex2
+                            .img 
+                                img(src="./assets/imgs/img-induction.jpg", alt="")  
+                            .timeline
+                                .content
+                                    h4 Reveal Group over the years
+                                    p Seeing a gap in the market for Workforce Management tools that achieved the goals they promised, Ian and Paula Crouch set out to create Reveal Group. In 2005, they didn’t know what the future of work would look like, but they knew that innovative technology solutions had the potential to improve the workforce and better the lives of its people.
+                                    p Now, over 15 years later, our team has grown to 10 global locations, with hundreds of clients who rely on our specialist expertise to help them Automate Better™. But it didn't happen overnight. Here's our story.
+                                .time
+                                    span 2005
+                                    h3 It Begins
+                                    p — First Client: leading Australian Bank
+            img(src="./assets/imgs/bg-opacity-white.png", alt="")
+            .owl-carousel.owl-theme.owl-induction-ss5
+                    .item
+                        .timeline
+                                .content
+                                    h4 Reveal Group over the years
+                                    p Seeing a gap in the market for Workforce Management tools that achieved the goals they promised, Ian and Paula Crouch set out to create Reveal Group. In 2005, they didn’t know what the future of work would look like, but they knew that innovative technology solutions had the potential to improve the workforce and better the lives of its people.
+                                    p Now, over 15 years later, our team has grown to 10 global locations, with hundreds of clients who rely on our specialist expertise to help them Automate Better™. But it didn't happen overnight. Here's our story.
+                                
+                    -for(i=1;i<5;i++)
+                        .item 
+                            .timeline
+                                .time
+                                        span 2005
+                                        h3 It Begins
+                                        p — First Client: leading Australian Bank
+        .ss3
+            - 
+                let dataLandingPage = [
+                            {number:'200+',title:'trained'},
+                            {number:'150+',title:'client teams upskilled'},
+                            {number:'40+',title:'courses developed'},
+                            {number:'200+',title:'trained'},
+                            {number:'150+',title:'client teams upskilled'},
+                            {number:'40+',title:'courses developed'},  
+                            {number:'150+',title:'client teams upskilled'},
+                            {number:'40+',title:'courses developed'},                                
+                            ] 
+            .owl-carousel.owl-theme.owl-company-ss3 
+                for landing in dataLandingPage
+                    .item
+                        h3=landing.number
+                        p=landing.title
+            .count
+                for landing in dataLandingPage
+                    .item
+                        .content
+                            h3=landing.number
+                            p=landing.title
+            .box-content
+                .content
+                    h3 STATS AND FACTS
+                    p Who we are
+        .ss4
+            h3 Our Values
+            .owl-carousel.owl-theme.owl-company-ss4
+                -for(i=1;i<5;i++)
+                    .item
+                        .pad
+                            .img
+                                img(src=`./assets/imgs/our-company${i}.jpg`, alt="") 
+                                p Honesty, openness and respect are fundamental to our success and integral to the way we communicate and operate. Passion for work and pride in its outcomes solidifies the importance we place on clients.
+                            .title
+                                h4 Nothing less than total transparency
+        .ss5
+            .induction-flex2
+                .content
+                    h3 CORPORATE SOCIAL RESPONSIBILITY 
+                    h4 Business is an opportunity to help our communities
+                    p Reveal Group’s Corporate Social Responsibility (CSR) Program is the blueprint for seeking<br/> and creating opportunities that deliver better long-term value for our people and<br/> communities.
+                    .owl-carousel.owl-theme.owl-company-ss5
+                         -for(i=1;i<4;i++)
+                            .item
+                                h3 People
+                                p Our people are at the heart of everything we do. As we grow our team we must attract, develop, and retain a diverse team of talented people.
+                .img
+                    img(src="./assets/imgs/img-induction.jpg", alt="")
+        .ss6
+            h4 Our Leadership
+            ul
+                li.active 
+                    a(href="") AUSTRALIA
+                li
+                    a(href="") AMERICA
+                li
+                    a(href="") CANADA
+            .owl-carousel.owl-theme.owl-company-ss6
+                -for(i=1;i<7;i++)
+                    .item 
+                        img(src="./assets/imgs/our-company-leadership.png", alt="") 
+                        h4 Firstname Lastname
+                        p Position title
+        .ss7
+            .our-family-flex2
+                - 
+                    let data2 = [
+                                {number:'200+',title:'trained'},
+                                {number:'150+',title:'client teams upskilled'},
+                                {number:'40+',title:'courses developed'},
+                                {number:'200+',title:'trained'},   
+                                ] 
+                 
+                .count
+                    for landing in data2
+                        .item
+                           .content
+                                h3=landing.number
+                                p=landing.title
+                .content-center
+                    .content
+                        h3 Join our Family
+                        p We are proud of the unique culture we have built and love the inspiring team we work with. By joining Reveal Group, you’ll be part of a growing global company, driven by innovation, integrity and the ambition to excel. You will work with people who share the same goals and be empowered to shape the futures of leading organisations. If you have a thirst for knowledge and deep, professional skills in a range of technologies, get in touch.
+                        a(href="#").btn View Current Openings
+                                 

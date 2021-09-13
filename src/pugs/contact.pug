@@ -1,0 +1,57 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title The Natives - Contact
+    
+block main-wrapper
+    h1(style="display:none") The Natives - Contact
+    .wrapper-child.contact
+        .hero-contact-flex2
+            .img
+                img(src="./assets/imgs/img-induction.jpg", alt="")
+            .hero-content
+                .content
+                    h2 CONTACT 
+                    h4 Get in touch
+                    p Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts with your business needs. It boosts customer service and satisfaction, increases revenues and profits and empowers your employees.
+        .ss1
+            .form-work-flex2
+                .content-form
+                    .location
+                        h3 FIND US HERE
+                        h4 Locations
+                        .maps
+                            -
+                                let locats = [
+                                    {h3:'New York',p:'330 Madison Av. 34th Floor New York, NY 10017<br/>+1 929-388-7551',href:'#'},
+                                    {h3:'Toronto',p:'212 King St W., Lv 6Toronto, ON, M5H 1K5<br/> +1 647-264-6180',href:'#'},
+                                    {h3:'Melbourne',p:'9-11 Cremorne St, Lv 4, Cremorne, VIC 3121<br/>+61 3 9425 9156 ',href:'#'},
+                                    {h3:'Sydney',p:'26-28 Wentworth Av., Surry Hills, NSW 2010',href:'#'},
+                                    {h3:'London ',p:'Great Newport St, London WC2H 7JA ',href:'#'},
+                                ]
+                            
+                            for locat in locats
+                                .map
+                                    h3 !{locat.h3}
+                                    p !{locat.p}
+                                    a(href=locat.href) VIEW MAP
+                        .owl-carousel.owl-theme.owl-maps
+                            -
+                                let locats1 = [
+                                    {h3:'New York',p:'330 Madison Av. 34th Floor New York, NY 10017<br/>+1 929-388-7551',href:'#'},
+                                    {h3:'Toronto',p:'212 King St W., Lv 6Toronto, ON, M5H 1K5<br/> +1 647-264-6180',href:'#'},
+                                    {h3:'Melbourne',p:'9-11 Cremorne St, Lv 4, Cremorne, VIC 3121<br/>+61 3 9425 9156 ',href:'#'},
+                                    {h3:'Sydney',p:'26-28 Wentworth Av., Surry Hills, NSW 2010',href:'#'},
+                                    {h3:'London ',p:'Great Newport St, London WC2H 7JA ',href:'#'},
+                                ]
+
+                            for locat in locats1
+                                .map
+                                    h3 !{locat.h3}
+                                    p !{locat.p}
+                                    a(href=locat.href) VIEW MAP
+                .contact-form 
+                    h3 Contact us 
+                    a(href="#").btn  General Enquiry
+                    a(href="#").btn  Product &amp; Account Support   
+                    include ./parts/includes/03-block-form-contact.pug

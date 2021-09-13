@@ -1,0 +1,71 @@
+
+.designer{
+    .ss1{
+        &>h4{
+            color: #FDBB58;
+            font-weight: 600;
+        }
+        .item{
+            h5{
+                font-weight: 600;
+            }
+            .btn{
+                font-weight: 600;
+                font-size: 14px;
+                border: 1px solid #FDBB58;
+                color:#FDBB58 ;
+                @include button-hover($white, #FDBB58)
+            }
+        }
+        table{
+            tr{
+                &:nth-child(2){
+                    background-color: rgba(253, 187, 88, 0.5);
+                }
+            }
+            th,td{
+                font-weight: 500;
+            }
+            td{
+                font-size: 16px;
+            }
+        }
+    }
+    .ss2{
+        &>h4{
+            color: #FDBB58;
+        }
+        .collapses{
+            .collapsible{
+                font-weight: 600;
+            }
+        }
+    }
+    .ss3{
+        h3{
+            font-size: 40px;
+        }
+        p{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+    .mixin-flex2{
+        .btn{
+
+            border: 1px solid $white; 
+            color: $white; 
+            &:hover{
+                background-color: $white;
+                color: $darkyellow;
+            }
+        }
+        th{
+            background-color: $darkyellow;
+        }
+    }
+   
+    .ss3{
+        background-color: $darkyellow;
+    }
+}

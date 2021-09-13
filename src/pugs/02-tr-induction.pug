@@ -1,0 +1,81 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title The Natives - TRAINING - INDUCTION COURSE
+    
+block main-wrapper
+    h1(style="display:none") TRAINING - INDUCTION COURSE
+    .wrapper-child.training-induction
+        .nav2
+            h2 Training Academy
+            .nav__list
+                - 
+                    let nav2 = [                  
+                                {title:'Induction Course',link:'./comming-soon.html'},
+                                {title:'Foundation Training Course',link:'./comming-soon.html'},
+                                {title:'Surface Automation Training Course',link:'./comming-soon.html'},
+                                {title:'Cart',link:'./comming-soon.html'}
+                                ]
+            
+                ul
+                    for data in nav2
+                        li
+                            a(href=data.link)=data.title
+        .hero-training-induction
+            .content
+                h2 TRAINING ACADEMY
+                h3 Blue Prism Induction Course
+                p This course offers a simple introduction to the configuration of process automations using the Blue Prism product. This overview is targeted at any interested person that would benefit from additional details of the product, but is unlikely to require the full Foundation Training course.
+                a(href="#") AUD $100.00
+        .ss1
+            include ./parts/includes/01-block-induction.pug
+        .ss2
+            include ./parts/includes/01-block-induction.pug
+        .ss3
+            h3 FURTHER INFORMAION 
+            h4 Other Features and Benfits
+            .owl-carousel.owl-theme.owl-induction-ss3
+                -for(i=1;i<5;i++)
+                    .item
+                        .content
+                            h3 Course Length
+                            p 2-3 hours of online coursework, with an expected completion time of 1 day, although access to the training environment is granted for 3 days from the date of commencement.
+        .ss4
+            .induction-flex2
+                .content
+                    h3 Get Started
+                    h4 USD $100.00
+                    select
+                        option(value="1") 1 
+                        option(value="2") 2 
+                        option(value="3") 3 
+                        option(value="4") 4 
+                        option(value="5") 5 
+                    a(href="#").btn Add to Cart
+                    h5 Please note:
+                    p Although this course provides a basic understanding of the software, graduates will not yet possess the requisite skills or experience to become an Accredited Developer.
+                    p Trainees will have access to the Training Environment for 3 days, starting from their requested commencement day. These dates will be confirmed via email once payment has been made.
+                    p Upon receipt of your paid order, you will be sent a form to provide additional information and qualifications to take the course. You will be contacted by the Reveal Group Training Academy, who will confirm your eligibility and enrollment in the course. Reveal Group Pty. Ltd. reserves the right to deny admittance and refund training fees at any time for any reason.
+                .img
+                    img(src="./assets/imgs/img-induction.jpg", alt="")
+        .ss5
+            .left-content
+                .content
+                    h3 OTHER COURSES
+                    h4 Ready to Become a Blue Prism Developer?
+                    p We’ve combined the power of RoboDesigner and RoboReview into a single, unified offering.<br/>It’s easy to set up, easy to use and it’s priced for companies of all sizes to benefit.
+            .owl-carousel.owl-theme.owl-induction-ss5.blue-prism
+                -for(i=1;i<3;i++)
+                    //class most-extent visible most extentsive
+                    .item
+                        .content
+                            .title
+                                p MOST EXTENSIVE 
+                            span Blue Prism 
+                            h3 Foundation Training Course
+                            .price
+                                span USD
+                                span $1750
+                            p per user, per month unlimited submissions billed annually
+                            a(href="#").btn Enrol Now
+            .clearfix

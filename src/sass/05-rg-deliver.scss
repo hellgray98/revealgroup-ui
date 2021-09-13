@@ -1,0 +1,456 @@
+.common-hero{
+    position: relative;
+    padding-top: 120px;
+    .content{
+        padding:100px;
+        width: 40%;
+    }
+    .img{
+        width: 60%;
+    } 
+    
+    h2{
+        font-size: 50px;
+        font-weight: bold;
+        letter-spacing: -1.4px;
+        color:$white
+    }
+   
+    .btn{
+         color:$white;
+         border: 1px solid $white;
+         background-color: transparent;
+         margin-right: 15px;
+         margin-bottom: 10px;
+         &:hover{
+            color:$darkblue;
+            border: 1px solid $darkblue;
+            background-color: $white;
+         }
+     }
+     p{
+         margin: 50px 0;
+         color:$white;
+         font-size: 16px;
+        line-height: 22px;
+
+     }
+    .induction-flex2{
+        img{
+            bottom: -80px;
+        }
+    }
+    @include respond-to(1024){
+        min-height: 730px;
+        .content{
+            width: 100%;
+            padding:50px
+        }
+        .img{
+            margin-top: 0;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+        h2{
+            font-size: 35px;
+        }
+       
+        .btn{
+             display: block;
+             height: 60px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             font-size: 14px;
+
+         }
+         p{  
+            margin-top: 20px;
+            margin-bottom: 60px;
+            font-size: 14px;
+         }
+    }
+    @include respond-to(600){
+        .img{
+            width: 90%;
+            position: absolute;
+            right: 0;
+            bottom: -70px;
+            img{
+                height: 85%;
+            }
+        }
+    }
+    @include respond-to(400){
+       
+        min-height: 650px;
+    }
+}
+.deliver-hero{
+    background-color: $darkyellow;   
+}
+.deliver{
+    .ss1{
+        background-color: $background;
+        padding: 150px;
+        &>h3{
+            font-size: 13px;
+            text-align: left;
+            font-weight: 400;
+            color:$darkyellow;
+            margin-bottom: 20px;
+        }
+        &>h4{
+            font-size: 40px;
+            color:$textblack;
+            text-align: left;
+            line-height: 48px;
+            margin-bottom: 100px;
+
+        }
+        .owl-dots {
+            text-align: left;
+            margin-top: 30px;
+           .owl-dot{
+            background-color: $white;
+           }
+           .active{
+               background-color: $darkyellow;
+           }
+         
+        }
+        
+        @include respond-to(1024){
+            padding:150px 70px;
+            &>h3{
+                font-size: 12px;
+            }
+            &>h4{
+                font-size: 24px;
+                line-height: 28px;
+            }
+            .item{
+                padding: 0;
+                p{
+                    min-height: 100px;
+                }
+               
+            }  
+        }
+    }
+    .ss2{
+        .block-induction{
+            &>.img{
+                width: 40%;
+                img{
+                    width: 100%;
+                }
+            }
+            &>.content{
+                width: 60%;
+            }
+            @include respond-to(1024){
+                &>.img{
+                    width: 100%;
+                }
+                &>.content{
+                    width: 100%;
+                }
+            }
+        }
+        
+        
+        .owl-dots {
+            text-align: left;
+            margin-top: 30px;
+           .owl-dot{
+            background-color: $background;
+           }
+           .active{
+               background-color: $darkyellow;
+           }
+         
+        }
+        @include respond-to(1024){
+             
+            &>h3{
+                font-size: 12px;
+            }
+            &>h4{
+                font-size: 24px;
+                line-height: 28px;
+            }
+            .item{
+                padding: 0;
+                p{
+                    min-height: 100px;
+                }
+               
+            }  
+        }
+
+    }
+    .ss3{
+        min-height: 400px;
+        padding:50px 90px;
+        background-color: $darkyellow;
+        p{
+            color: $white;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            letter-spacing: -1px;
+        }
+        @include respond-to(1024){
+            padding: 40px;
+            p{
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: -0.5px;
+            }
+        }
+
+    }
+    .ss4{
+        .owl-dots {
+            text-align: left;
+            margin-top: 30px;
+           .owl-dot{
+            background-color: $background;
+           }
+           .active{
+               background-color: $darkyellow;
+           }
+         
+        }
+        padding: 80px 100px;
+        
+        .block-deliver{
+            margin: 0 auto;
+            max-width: 500px;
+            .img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 460px;
+            }
+        }
+        h3{
+            color:$textblack;
+            font-size: 26px;
+            letter-spacing: -0.5px;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+        li{
+            position: relative;
+            margin-left: 40px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 22px;
+            &::before{
+                content: url(../imgs/icons/check-yellow.svg);
+                position: absolute;
+                left: -40px;
+                top: 0;
+            }
+        }
+        @include respond-to(1024){
+            padding: 40px;
+        }
+        h3{
+            
+            font-size: 20px;
+        }
+        li{
+            font-size: 14px;
+            line-height: 19px;
+        }
+        .content{
+            min-height: 300px;
+        }
+    }
+    .ss5{
+        background-color: $background;
+        .img{
+            position: relative;
+            &::before{ 
+                background-color: $darkyellow 
+            }
+            &::after{ 
+                background-color: #D8D8D8; 
+            }
+        } 
+        .item { 
+            i{
+                display: block;
+                font-style: normal;
+                font-size: 14px;
+                color:$darkyellow;
+                margin: 20px 0;
+            }
+            h3{
+                font-size: 24px;
+                color:$textblack;
+                margin: 20px 0;
+
+            }
+        }
+        li{
+            position: relative;
+            margin-left: 40px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 22px;
+            &::before{
+                content: url(../imgs/icons/check-yellow.svg);
+                position: absolute;
+                left: -40px;
+                top: 0;
+            }
+        }
+        .owl-dots {
+            margin-top: 30px;
+           .owl-dot{ 
+               background: $white; 
+           }
+           .active{ 
+               background: $darkyellow; 
+           }
+       }
+       .prev-slide-d::before {
+            content: url(../imgs/icons/prev-yellow.svg);
+        }
+        .next-slide-d::before {
+            content: url(../imgs//icons/next-yellow.svg);
+        }
+    }
+    
+    .ss6{
+        .mentored-flex2{
+            justify-content: center;
+            align-items: center;
+            &>.img{
+                width: 40%;
+                img{
+                    width: 100%;
+                }
+            }
+            &>.content{
+                width: 60%;
+                padding:60px;
+            }
+            .block-deliver{
+                padding:0;
+                padding-right: 20px;
+                .content{
+                    padding-top:25px;
+                }
+                
+            }
+            h4{
+                @extend %share-h4;
+            }
+            p{
+                @extend %share-p;
+            }
+            h3{
+                font-size: 20px;
+                font-weight: bold;
+                color:$textblack;
+                margin: 25px 0;
+            }
+            @include respond-to(1024){
+                &>.img{
+                    width: 100%;
+                }
+                &>.content{
+                    width: 100%;
+                    padding:40px
+                }
+                .block-deliver{
+                    margin-top: 25px;
+                    padding-right:0px;
+                    padding:20px
+
+                }
+                h3{
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+
+            }
+            .owl-dots {
+                margin-top: 0px;
+               .owl-dot{ 
+                   background: $background; 
+               }
+               .active{ 
+                   background: $darkyellow; 
+               }
+           }
+        }
+    }
+    .ss7{
+        position: relative;
+    }
+    .ss8{
+        padding:90px 0;
+        h4{
+            @extend %share-h40;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        &>h4{
+            padding: 0 90px;
+            width: 80%;
+            margin-top: 130px;
+        }
+        .authority-dflex2{
+            justify-content: center;
+            align-items: center;
+            &>.img{
+                width: 55%;
+            }
+            &>.content{
+                width: 45%;
+                padding:90px;
+               
+            }
+            
+        }
+        @include respond-to(1024){
+
+            padding: 40px 0;
+            
+            &>h4{
+                padding: 40px;
+                margin: 0;
+                line-height: 28px;
+                width: 100%;
+            }
+            .authority-dflex2{
+                flex-direction: column-reverse;
+                &>.img{
+                    width: 90%;
+                    margin-right: -40px;
+                }
+                &>.content{
+                    width: 100%;
+                    padding: 40px;
+                }
+            }
+            
+            
+        }
+        
+    }
+    .ss9{
+        background-color: $background;
+        position: relative;
+        
+    }
+    .ss10{
+        position: relative;
+    }
+}

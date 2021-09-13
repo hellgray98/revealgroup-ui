@@ -1,0 +1,82 @@
+extends ./parts/layout.pug
+prepend meta
+    title The Natives - App Store
+    
+block main-wrapper
+    h1(style="display:none") The Natives - App Store
+    .wrapper-child.appstore
+        .common-hero.appstore-hero
+            .induction-flex2
+                .appstore-content.content
+                    h2 App Store
+                    p In rapidly changing markets, Technology, Media & Entertainment, and Telecommunications companies must redefine the customer experience, capitalize on digital convergence and quickly launch new business models.
+                .img
+                    img(src="./assets/imgs/img-induction.jpg", alt="")
+        .ss1
+            h3 Applications
+            .appstore-application
+                div
+                    h4 Automation accelerators (RoboDesigner, RoboReview)
+                    p Deliver superior service to your customers while cutting operational costs and reducing regulatory risk through Intelligent Automation solutions. Deliver superior service to your customers while cutting operational costs and reducing regulatory risk through Intelligent Automation solutions.
+                    .item
+                        ul
+                            - 
+                                let apps1 = [
+                                    {src: './assets/imgs/appstore/blue-prism.svg',alt: 'icon 1', h5: 'RoboDesigner for Blue Prism', p: 'Deliver superior service to your customers while cutting operational costs and reducing regulatory risk.',href: '#'},
+                                    {src: './assets/imgs/appstore/uipath.svg',alt: 'icon 2', h5: 'RoboDesigner for UiPath', p: 'Deliver superior service to your customers while cutting operational costs and reducing regulatory risk.',href: '#'},
+                                    {src: './assets/imgs/appstore/blue-prism.svg',alt: 'icon 3', h5: 'RoboReview for Blue Prism', p: 'Deliver superior service to your customers while cutting operational costs and reducing regulatory risk.',href: '#'},
+                                    {src: './assets/imgs/appstore/uipath.svg',alt: 'icon 4', h5: 'RoboReview for UiPath ', p: 'Deliver superior service to your customers while cutting operational costs and reducing regulatory risk.',href: '#'},
+                                ]
+                            for app in apps1
+                                li
+
+                                    img(src=app.src, alt=app.alt)
+                                    h5=app.h5
+                                    p=app.p
+                                    .appstore-btn
+                                        a(href=app.href).btn Free Trial
+                                        a(href=app.href).btn Download Now
+            .appstore-application.center
+                div
+                    h4 Automation Life-cycle Management (RoboManager)
+                    p Deliver superior service to your customers while cutting operational costs and reducing regulatory risk through Intelligent Automation solutions. Deliver superior service to your customers while cutting operational costs and reducing regulatory risk through Intelligent Automation solutions.
+                    .item
+                        ul
+                            - 
+                                let apps2 = [
+                                    {src: './assets/imgs/appstore/blue-prism.svg',alt: 'icon 1', h5: 'RoboManager for Blue Prism', p: 'Deliver superior service to your customers while cutting operational costs and reducing regulatory risk.',href: '#'},
+                                    {src: './assets/imgs/appstore/uipath.svg',alt: 'icon 2', h5: 'RoboManager for UiPath', p: 'Deliver superior service to your customers while cutting operational costs and reducing regulatory risk.',href: '#'},
+                                    {src: './assets/imgs/appstore/microsoft.svg',alt: 'icon 3', h5: 'RoboManager for Microsoft', p: 'Deliver superior service to your customers while cutting operational costs and reducing regulatory risk.',href: '#'},
+                                    {src: './assets/imgs/appstore/auto.svg',alt: 'icon 4', h5: 'RoboManager for Automation Anywhere', p: 'Deliver superior service to your customers while cutting operational costs and reducing regulatory risk.',href: '#'},
+                                ]
+                            for app in apps2
+                                li
+
+                                    img(src=app.src, alt=app.alt)
+                                    h5=app.h5
+                                    p=app.p
+                                    .appstore-btn
+                                        a(href=app.href).btn Free Trial
+                                        a(href=app.href).btn Download Now
+            .appstore-application
+                div
+                    h4 Automation Products (Venfi Connectors BP, UiPath)
+                    p Deliver superior service to your customers while cutting operational costs and reducing regulatory risk through Intelligent Automation solutions. Deliver superior service to your customers while cutting operational costs and reducing regulatory risk through Intelligent Automation solutions.
+                    .item
+                        ul
+                            - 
+                                let apps3 = [
+                                    {src: './assets/imgs/appstore/blue-prism.svg',alt: 'icon 1', h5: 'Venfi Connectors for Blue Prism', p: 'Deliver superior service to your customers while cutting operational costs and reducing regulatory risk.',href: '#'},
+                                    {src: './assets/imgs/appstore/uipath.svg',alt: 'icon 2', h5: 'Venfi Connectors for UiPath', p: 'Deliver superior service to your customers while cutting operational costs and reducing regulatory risk.',href: '#'},
+                                ]
+                            for app in apps3
+                                li
+
+                                    img(src=app.src, alt=app.alt)
+                                    h5=app.h5
+                                    p=app.p
+                                    .appstore-btn
+                                        a(href=app.href).btn Free Trial
+                                        a(href=app.href).btn Download Now
+        .ss2
+            include ./parts/includes/04-block-frm-include.pug

@@ -1,0 +1,51 @@
+extends ./parts/layout.pug
+prepend meta
+    title The Natives - SUITE
+    
+block main-wrapper
+    h1(style="display:none") The Natives - SUITE
+    .wrapper-child.suite
+        .hero-suite-flex2
+            .content
+                .item
+                    img(src='./assets/imgs/robo-suite.svg', alt="")
+                    p Reveal Group provides the tools to help every <br/>automation team unleash its full potential.
+                    a(href="#").btn Play Video
+                    a(href="#").btn Explore all of RoboSuite
+            .form
+                .container-frm
+                    h4 Give us a try.
+                    p Try it free for 14 days – no credit card required.
+                    form 
+                        input(type="text" placeholder='Full name')
+                        input(type="text" placeholder='Email')
+                        input(type="text" placeholder='Phone')
+                        input(type="text" placeholder='Organization')
+                        input(type="text" placeholder='Country' style='width:100%')
+                        div    
+                            input(type="checkbox") 
+                            span  I understand that using RoboReview and RoboDesigner requires existing access to Blue Prism.
+                        button(type="submit") Get Started
+                        p By clicking 'Get Started' you agree to our Terms and Conditions and Privacy Policy
+        .ss1
+            .video-flex2
+                .video
+                    <iframe src="https://www.youtube.com/embed/42Gi7hmlZIw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                include ./parts/includes/08-block-tool-robo-suite.pug
+        .ss2
+            .owl-carousel.owl-theme.owl-deliver-ss2.robo-item
+                +roboItem('#00A755','IDENTIFY, DELIVER, BENEFIT','assets/imgs/auto-reveal01.svg','A single source of truth to identify, prioritize, deliver and realize benefits from automation, for any RPA tool.')
+                +roboItem('#F3B45A','AUTOMATE DELIVERY','assets/imgs/auto-reveal02.svg','Instantly creates Blue Prism automation components to best practice standards, for you.')
+                +roboItem('#DA4039','AUTOMATE CODE REVIEWS','assets/imgs/auto-reveal03.svg','A proactive self-service check of your Blue Prism code quality so you get continuous, real-time feedback.')
+        .ss3
+            h4 WE ARE HERE TO HELP
+            h3 Need help choosing the right plan?
+            p Our Customer Success team provides Onboarding Services. Our tailored guidance, phone support, and training ensure<br/> you get the most out of your RoboDesigner and RoboReview bundle. You’ll achieve your automation program goals with<br/> an Onboarding Services program completely suited to your needs.
+            a(href="#").btn Speak to an Expert
+            a(href="#").btn View Pricing 
+            .height
+        .ss4
+            .owl-carousel.owl-theme.owl-deliver-ss2
+                -for(i=1;i<4;i++)
+                    .item
+                        img(src=`./assets/imgs/block-suite0${i}.png`, alt="") 

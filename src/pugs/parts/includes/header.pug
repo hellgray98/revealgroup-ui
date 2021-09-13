@@ -1,0 +1,26 @@
+header.wrapper-child
+    div#toggle-menu
+            span
+            span
+            span
+    //if nav class = "white" logo-white visible else logo-black
+    nav.flex2
+        a(href="index.html").logo
+            img(src="assets/imgs/logo-black.svg", alt="").logo-black
+            img(src="assets/imgs/logo-white.svg", alt="").logo-white
+            - 
+                let link = [
+                            {title:'Services',link:'./services.html'},
+                            {title:'Products',link:'./products.html'},
+                            {title:'Company',link:'./company.html'},
+                            {title:'Solutions',link:'./solutions.html'},
+                            {title:'Resources',link:'./resources.html'}
+                            ]
+        
+        ul
+            for data in link
+                li
+                    a(href=data.link)=data.title
+            button.btn Contact us
+
+        

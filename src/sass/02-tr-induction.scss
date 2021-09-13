@@ -1,0 +1,283 @@
+.training-induction{
+    padding-top: 120px;
+    @include respond-to(1024){
+        padding-top: 100px;
+    }
+    .nav2{
+        @include respond-to(1024){
+            display: none;
+        }
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding:0 30px;
+        background-color: $blue;
+        li{
+            display: inline;
+            padding:10px;
+        }
+        a{
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            color: $white;
+            font-weight: bold;
+            line-height: 17px;
+        }
+        h2{
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: bold;
+            color: $white;
+        }
+    }
+    .hero-training-induction{
+        background: $background;
+        min-height: 400px;
+        @include respond-to(600){
+            min-height: 600px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .content{
+            margin-top: -5%;
+            width: 50%;
+        }
+        h2{
+            font-size: 13px;
+            color: $blue;
+            letter-spacing: 1px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        h3{
+            font-size: 40px;
+            text-align: center;
+            letter-spacing: -1px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        p{
+            font-size: 16px;
+            line-height: 21px;
+            color:black;
+            text-align: center;
+        }
+        a{
+            color: $blue;
+            font-size: 16px;
+            letter-spacing: -0.5;
+            text-align: center;
+            display: block;
+            margin-top: 35px;
+            text-decoration: none;
+        }
+        @include respond-to(768){
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding:50px;
+            .content{
+                width: 100%;
+            }
+            a,p,h2,h3{
+                text-align: left;
+            }
+            h1{
+                font-size: 12px;
+            }
+            p{
+                font-size: 14px;
+            }
+            h3{
+                font-size: 30px;
+            }
+            a{
+                font-size: 14px;
+            }
+        }
+
+    }
+    .ss1{
+        position: relative;
+    }
+    .ss2{
+        position: relative;
+        background-color: $background;
+        .induction-flex2{
+            h3{display: none;}
+            @include respond-toSP(1024){
+                flex-direction: row-reverse;
+               
+                h4{margin-top: 0;}
+                .img img{
+                    top: 0px;
+                    max-height: 120%; 
+                } 
+            }
+            @include respond-to(600){
+                .img {
+                    margin-top: 0;
+                    img{
+                        position: relative;
+                        left: -20px;
+                    }
+                }
+            }           
+        } 
+    }
+    .ss3{
+        padding:150px 90px;
+        background-color: $blue;
+        *{color:white}
+        .item{
+           padding:0 10px;
+            h3{
+                margin: 20px 0;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            p{
+              font-size: 16px;
+              line-height: 22px;  
+            }
+        }
+        .content{
+            border-top: 1px solid $white;
+        }
+        .owl-dots {
+            margin-top: 30px;
+           .owl-dot{
+            background-color: $white;
+           }
+           .active{
+               background-color: $grey;
+           }
+         
+        }
+    }
+    .ss4{
+        overflow: hidden;
+        h3{
+            font-size: 40px;
+            letter-spacing: -1px;
+            font-weight: bold;
+            color:$textblack
+        }
+        h4{
+            font-size: 26px;
+            color:$blue;
+            letter-spacing: -0.5px;
+        }
+        select,a{
+            display: inline-block;
+        }
+        select{
+            padding:10px 30px;
+            color:$blue;
+            font-size: 14px;
+            font-weight: bold;
+            margin-right: 30px;
+            border: none;
+            outline: none;
+            border: 1px solid #cccc;
+        }
+        .btn{
+            color:$white;
+            background-color: $blue;
+            min-width: 30%;
+            text-align: center;
+        }
+        h5{
+            font-size: 16px;
+            font-weight: bold;
+            color:$blue;
+            margin: 40px 0;
+        }
+        p{
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 10px;
+        }
+        @include respond-to(600){
+            .img {
+                margin-top: 0;
+                img{
+                    position: relative;
+                    right: -25px;
+                }
+            }
+        }
+    }
+    .ss5{
+        padding:110px 90px;
+        background: $background;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .owl-induction-ss5{
+            width: 65%;
+        }
+        .left-content{
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h3{
+                font-size: 13px;
+                color:$blue;
+                letter-spacing: 1px;
+                margin-bottom: 10px;
+            }
+            h4{
+                font-size: 30px;
+                letter-spacing: 0.8px;
+                line-height: 40px;
+                font-weight: bold;
+                margin: 20px 0;
+            }
+            p{
+                font-size: 16px;
+                color:#333333;
+                line-height: 22px;
+            }
+        }
+        @include respond-to(768){
+            padding:50px 40px;
+            .owl-induction-ss5,.left-content{
+                width: 100%;
+            }
+            .left-content{ 
+                padding:20px;
+                h3{
+                    font-size: 12px; 
+                    margin-bottom: 10px;
+                }
+                h4{
+                    font-size: 24px;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 19px;
+                    margin-bottom: 40px;
+                }
+            }
+            
+        }
+        .owl-dots {
+            margin-top: 30px;
+            text-align: center;
+           .owl-dot{
+            background-color: $white;
+           }
+           .active{
+               background-color: $blue;
+           }
+         
+        }
+    }
+}

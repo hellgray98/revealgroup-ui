@@ -1,0 +1,268 @@
+.enable-hero{
+    background-color: $purple;
+}
+.enable{
+    .ss1{
+        background-color: $background;
+        min-height: 400px;
+        padding: 0 150px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 300px;
+        .content{
+            padding:50px;
+        }
+        h2{
+            @extend %share-h40;
+            color: $textblack;
+            margin-top: 80px;
+        }
+        @include respond-to(1024){
+            padding: 0px;
+            padding-bottom: 300px;
+            .content{
+                width: 100%;
+            }
+        }  
+    }
+    .ss2{
+        position: relative;
+        padding:40px;
+        min-height: 450px;
+       
+        .services{
+            position: absolute;
+            width: 100%;
+            top: -200px;
+            left: 0;
+            h2{
+                text-align: center;
+                font-size: 14px;
+                color: $purple;
+                margin-bottom: 40px;
+            }
+        }
+        @include respond-toSP(1024){
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            .destription{
+                width: 100%;
+                text-align: center;
+            }
+        }
+        @include respond-toSP(1200){
+            min-height: 550px;
+        }
+        @include respond-toSP(1450){
+            min-height: 650px;
+        }
+        @include respond-toSP(1750){
+            min-height: 750px;
+        }
+        .owl-dots {
+            text-align: center;
+            margin-top: 0;
+            padding-bottom: 40px;
+           .owl-dot{ 
+               background: $background; 
+           }
+           .active{ 
+               background: $purple; 
+           }
+       }
+        @include respond-to(1024){
+            min-height: 800px;
+            .destription{
+                position: absolute;
+                bottom: 20px;
+            }
+            .services{ 
+                top: -300px;
+                left: 0;
+            }
+        }
+    }
+    .ss3{
+        background-color: $purple;
+        padding:50px 150px;
+        h3{
+            text-align: left;
+            color: $white;
+            @extend %share-h4;
+            min-height: 290px;
+        }
+        @include respond-to(1024){
+            padding: 40px;
+            h3{
+                min-height: 200px;
+            }
+        }
+         
+    }
+    .ss4{
+        padding:110px 90px;
+        &>h3{
+            @extend %share-h4;
+            color:$textblack;
+            margin-bottom: 40px;
+            text-align: left;
+            padding: 30px;
+        }
+        .item{
+            transition: all 0.3s;
+            margin-top: 20px;
+            padding: 40px 30px;
+            padding-right: 30px;
+            &:hover{
+                background-color: $background;
+                h4{
+                    display: block;
+                }
+            }
+            border-radius: 30px;
+        }
+        .content{
+            
+            border-top: 1px solid $purple;
+            h3{
+                @extend %share-h24;
+                margin: 25px 0;
+                color:$textblack;
+
+            }
+        }
+        li{
+            list-style-type: disc;
+            list-style-position: inside;
+            @extend %share-p;
+            color: #43413C  ;
+            margin-bottom: 10px;
+        }
+        h4{
+            display: none;
+            padding: 30px;
+            text-align: center;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 16px;
+        }
+        @include respond-to(1024){
+            padding: 40px;
+            .item{
+                padding: 0;
+            }
+            &>h3{
+                padding: 0;
+            }
+        }
+    }   
+    .ss5{
+        background-color: $background;
+        @include respond-toSP(1024){
+            .block-include-landing-ss1 .img {
+                top: 0;
+            }
+            .img{
+                max-width: 50%;
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        @include respond-to(1024){
+            .block-include-landing-ss1 h3{
+                line-height: 30px;
+            }
+            
+            padding-bottom: 50px;
+        }
+        @include respond-to(550){
+            .img{
+                height: 250px;
+                bottom: -150px;
+            }
+        }
+        
+    }
+    .ss6{
+        padding: 90px 70px;
+        .height{
+            background-color: $white;
+        }
+        .desktop{
+
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .item{
+               width: 24%; 
+            }
+        }
+        .item{
+            margin-bottom: 40px;
+            img{
+                margin-bottom: 20px;
+                width: auto;
+            }
+            p{
+                min-height: 100px;
+                @extend %share-p
+            }
+        }
+        &>h3{
+            text-align: left;
+            color: $textblack;
+            margin-bottom: 40px;
+            @extend %share-h4;
+        }
+        &>h4{
+            text-align: left;
+            color: $purple;
+            @extend %share-p;
+            margin: 60px 0 ;
+        }
+        .owl-deliver-ss2{
+            display: none;
+        }
+        @include respond-to(1024){
+            padding: 40px;
+            padding-top: 150px;
+            .desktop{
+                display: none;
+            }
+            .owl-deliver-ss2{
+                display: block;
+            }
+            .height{
+                display: none;
+            }
+            &>h4{
+                margin: 20px 0;
+            }
+        }
+        .owl-dots {
+            text-align: left;
+            margin-top: 0;
+            padding-bottom: 40px;
+           .owl-dot{ 
+               background: $background; 
+           }
+           .active{ 
+               background: $purple; 
+           }
+       }
+    }
+    .ss7{
+        position: relative;
+        .form{
+            background-color: $background;
+        }
+        input{
+            background-color: $background;
+        }
+    }
+   
+}

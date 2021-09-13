@@ -1,0 +1,57 @@
+footer.wrapper-child
+    .footer-d-flex
+        .left
+            - 
+                let links = [
+                    {id: '1',groupTitle:'Services',liElement:[{title:'Enable',link:'commingSoon.html'},{title:'Discover',link:'commingSoon.html'},{title:'Deliver',link:'commingSoon.html'},{title:'Operate',link:'commingSoon.html'},{title:'Extend',link:'commingSoon.html'},{title:'Platform',link:'commingSoon.html'}]},
+                    {id: '2',groupTitle:'Products',liElement:[{title:'Reveal OpsIQ',link:'commingSoon.html'},{title:'RoboManager',link:'commingSoon.html'},{title:'RoboDesigner',link:'commingSoon.html'},{title:'RoboReview',link:'commingSoon.html'},{title:'App Store',link:'commingSoon.html'}]},
+                    {id: '3',groupTitle:'Company',liElement:[{title:'Partners',link:'commingSoon.html'},{title:'Resources',link:'commingSoon.html'},{title:'Solutions',link:'commingSoon.html'},{title:'Contact',link:'contact.html'},]}
+                    ]
+            for data in links
+                .group-menu
+                    h3=data.groupTitle
+                    button.collapsible=data.groupTitle
+                    .nextElement
+                        ul(class='left'+data.id)
+                            for data1 in data.liElement
+                                li
+                                    a(href=data1.link)=data1.title
+                   
+        .right
+            .form-email-d-flex
+                .left-item
+                    h3 Keep up to date
+                    p Subscribe to our newsletter.
+                .right-item
+                    input(type="text" placeholder="Enter your email address")
+                    button.btn submit
+            hr
+            .list-branch-d-flex
+                -
+                    let items = [
+                        {h4: 'New York', p:'330 Madison Av. 34th Floor New York, NY 10017 <br/> +1 929-388-7551'},
+                        {h4: 'Melbourne', p:'9-11 Cremorne St, Lv 4,Cremorne, VIC 3121 <br/> +61 3 9425 9156'},
+                        {h4: 'Sydney', p:'26-28 Wentworth Av.,Surry Hills, NSW 2010'},
+                        {h4: 'Toronto', p:'212 King St W., Lv 6Toronto, ON, M5H 1K5 <br/> +1 647-264-6180'},
+                        {h4: 'London ', p:'Great Newport St,London WC2H 7JA'},
+                    ]
+                for item in items
+                    .item
+                        h4 !{item.h4}
+                        button.collapsible !{item.h4}
+                        .nextElement    
+                            p !{item.p}
+            hr.block
+    .copy-right.wrapper-child
+        - 
+            let linkCopyRight = [
+                {id:'3',liElement:[{title:'Privacy Policy',link:'#'},{title:'Terms and Conditions',link:'#'},{title:'Cookies',link:'#'},{title:'All rights reserved 2020',link:'#'}]},
+                {id:'2',liElement:[{title:'Linkedin',link:'#'},{title:'Twitter',link:'#'},{title:'YouTube',link:'#'}]},
+            ]
+        ul
+            li.list-menu
+                for social in linkCopyRight
+                    ul(class=`item`+social.id)
+                        for dataSocial in social.liElement
+                            li
+                                a(href=dataSocial.link target='_blank')=dataSocial.title

@@ -1,0 +1,60 @@
+extends ./parts/layout.pug
+prepend meta
+    title The Natives - ARTICLE
+    
+block main-wrapper
+    h1(style="display:none") The Natives - ARTICLE 
+    .wrapper-child.article-page
+        .top-bar 
+            .form-input
+                input(type="text" placeholder="Search")
+                span Search
+            ul
+                li 
+                    a(href="#") Customer Stories
+                li 
+                    a(href="#") Newsroom
+                li 
+                    a(href="#") Events
+                li 
+                    a(href="#") Whitepapers
+                li 
+                    a(href="#") Reveal TV
+            ul
+                li 
+                    a(href="#") Refine by
+                
+            select
+                option Refine by
+                option Customer Stories
+                option Newsroom
+                option Events
+                option Whitepapers
+                option Reveal TV
+                
+        .hero-flex2
+            .owl-carousel.owl-theme.owl-1-item.news-article
+                +ArticleItem("","NEWS","Title of the featured article","Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts.","Read More","news",'commingsoon.html')
+                +ArticleItem("","EVENT","Title of the featured article","Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts.","Read More","event",'commingsoon.html')
+                +ArticleItem("","WHITEPAPER","Title of the featured article","Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts.","Read More","white",'commingsoon.html')
+            .img
+                img(src="assets/imgs/article01.jpg", alt="")
+        .ss1
+            .title
+                .left 
+                    h3 Newsroom
+                    p Latest media articles and press releases.
+            -for(i=1;i<3;i++)
+                div(class=`block-article${i}`)
+                    .high-light
+                        +ArticleItem("assets/imgs/story-img1.jpg","NEWS","Experts in intelligent automation","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.","Read More","news",'commingsoon.html')
+                    .owl-carousel.owl-theme.owl-4-item.news-article
+                        +ArticleItem("assets/imgs/story-img1.jpg","NEWS","Experts in intelligent automation","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.","Read More","news",'commingsoon.html')
+                        +ArticleItem("assets/imgs/story-img1.jpg","NEWS","Experts in intelligent automation","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.","Read More","news",'commingsoon.html')
+                        +ArticleItem("assets/imgs/story-img1.jpg","EVENT","Experts in intelligent automation","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.","Read More","event",'commingsoon.html')
+                        +ArticleItem("assets/imgs/story-img1.jpg","WHITEPAPER","Experts in intelligent automation","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.","Read More","white",'commingsoon.html')
+            .loadmore    
+                a(href="#").btn Load More
+            .height
+        .ss2                
+            include ./parts/includes/04-block-frm-include.pug

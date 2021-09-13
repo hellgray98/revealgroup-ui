@@ -1,0 +1,52 @@
+extends ./parts/layout.pug
+prepend meta
+    title The Natives - SUITE
+    
+block main-wrapper
+    h1(style="display:none") The Natives - SUITE 
+    .wrapper-child.suite-page
+        .hero-suite-flex2
+            .content
+                .item
+                    img(src='./assets/imgs/robo-suite.svg', alt="")
+                    h2 Easy to use.<br/> Easy to get started.<br/> No Hidden Costs.
+                    a(href="#").btn Speak to an Expert
+                    a(href="#").btn Explore  RoboSuite
+            .form
+                img(src="./assets/imgs/suite01.png", alt="")
+        .ss1
+            .content
+                h4 PRICING
+                h2 A plan for every price
+                p We’ve combined the power of RoboDesigner and RoboReview into a single, unified offering.
+                p It’s easy to set up, easy to use and it’s priced for companies of all sizes to benefit.
+            .list-logo 
+                    img(src="./assets/imgs/robo-review01.svg", alt="")
+                    img(src="./assets/imgs/designer01.svg", alt="")
+                    img(src="./assets/imgs/manager01.svg", alt="")
+        .ss2
+            .owl-carousel.owl-theme.owl-landing-mobie-ss5.blue-prism.mixin-extent
+                +extensive("#1E99D5","", "","Small Teams","1-9 users","$340","Try Free For 14 Days","lagre","small","Buy Now")
+                +extensive("#1E99D5"," most-extent", "RECOMMENDED","Growing Teams","Foundation Training Course ","$300","Enquire Now","lagre","small")
+                +extensive("#1E99D5","", "","Larger Teams","20-29 users","$250","Enquire Now","lagre","small",'','40px 40px 56px 40px') 
+            +extent-block2('#1E99D5')
+        .ss3
+            h4 PRICING
+            h3 Frequently Asked Questions
+            -for(i=1;i<7;i++)
+                .collapses
+                    button.collapsible What is RoboSuite Premium?
+                    .content
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illo!  
+        .ss4
+            h4 WE ARE HERE TO HELP
+            h3 Need help choosing the right plan?
+            p Our Customer Success team provides Onboarding Services. Our tailored guidance, phone support, and training ensure<br/> you get the most out of your RoboDesigner and RoboReview bundle. You’ll achieve your automation program goals with<br/> an Onboarding Services program completely suited to your needs.
+            a(href="#").btn Speak to an Expert
+            a(href="#").btn View Pricing 
+            .height
+        .ss5
+            .owl-carousel.owl-theme.owl-deliver-ss2
+                -for(i=1;i<4;i++)
+                    .item
+                        img(src=`./assets/imgs/block-suite0${i}.png`, alt="") 

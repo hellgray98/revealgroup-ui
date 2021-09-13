@@ -1,0 +1,246 @@
+.designer-page{
+    overflow: hidden;
+    margin-top: 120px;
+    @include respond-to(1024){
+        margin-top: 100px;
+    }
+    .block-top-bar{
+        a:hover{ 
+            color: $darkyellow;
+        }
+    }
+    .mixin-flex2{
+        margin-top: 0;
+        height: 448px;
+        padding: 65px 60px;
+        .content{
+            img{
+                padding-top: 35px;
+            }
+        }
+        .btn{
+            @include button-hover($darkyellow,$white)
+        }
+        @include respond-to(768){
+            height: 100%;
+            padding: 32px 50px;
+            .content{
+                img{
+                    padding-top: 0;
+                }
+            }
+            h2{
+                width: 100%;
+            }
+            .btn{
+                width: 100%;
+            }
+        }
+        @include respond-to(600){
+            .img{
+                min-height: 90px;
+                img{
+                    top: 90%;
+                }
+            }
+        }
+    }
+    .ss1{
+        @include respond-to(1024){
+            .height{
+                display: none;
+            } 
+        }
+    }
+    .mix-ss-mix-block{
+        padding: 50px 100px;
+        h4{
+            color: $white;
+            @extend %share-h40;
+            text-align: left;
+        }
+        .btn{
+            margin-top: 75px;
+            margin-right: 15px;
+            color: $white;
+            border: 1px solid $white;
+            font-size: 14px;
+            font-weight: 600;
+            @include button-hover(#FDBB58,$white)
+        }
+         
+        @include respond-to(768){
+            padding: 50px;
+            h4{
+                line-height: 36px;
+            }
+            .btn{
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .robo-ss2{
+        .item{
+            margin-top: 0;
+            h4{
+                font-size: 20px ;
+                height: 50px;
+                margin: 0;
+            }
+            p{
+                min-height: 150px;
+            }
+        }
+        .owl-dots {
+            
+           .owl-dot{ 
+               background: $background; 
+           }
+           .active{ 
+               background: $darkyellow; 
+           }
+       } 
+       @include respond-to(768){
+           .content{
+               h3{
+                   font-size: 25px;
+               }
+           }
+           .item{
+               p{
+                   min-height: auto;
+               }
+           }
+       }
+    }
+    .mix-ss-mix-item{
+        .mix-item{
+            h3{
+                height: 70px;
+                @include respond-to(768){
+                    height: 50px;
+                }
+            }
+        }
+    }
+    .ss2{
+        position: relative;
+        padding: 80px 100px 80px 100px;
+        background-color: $background;
+        &>h3{
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #FDBB58;
+            margin-bottom: 20px;
+        }
+        &>h4{
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 40px;
+            text-align: center;
+            letter-spacing: -1.12px;
+            color:$textblack;
+            margin-bottom: 30px;
+        }
+        &>p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            letter-spacing: -0.448px;
+            color: #333333;
+            margin-bottom: 40px;
+        }
+        ul{
+            margin-bottom: 50px;
+            text-align: center;
+            li{
+                display: inline;
+                padding: 10px 0;
+                margin:0 25px;
+                font-size: 13px;
+                color:$textblack;
+                text-transform: uppercase;
+                font-weight: 600;
+                &.active{
+                    color:$darkyellow;
+                    border-bottom: 1px solid $darkyellow;
+                }
+            }
+        }
+        
+        @include respond-to(768){
+            padding:50px 50px 70px 50px;
+            
+            &>h3{
+                text-align: left;
+                font-size: 12px;
+            }
+            &>h4{
+                text-align: left;
+                font-size:24px;
+                line-height: 28px;  
+            }
+            &>p{
+                text-align: left;
+                font-size: 14px;
+                line-height: 20px; 
+            }
+            ul{
+              display: none;
+            }
+            .item{
+                .content{
+                    border: none;
+                }
+            }
+            .mixin-extent{
+                .item{
+                    padding: 20px 0 20px 0;
+                }
+            }
+        }
+        .owl-dots {
+            margin: 0 0 30px 0;
+            text-align: center;
+            .owl-dot{
+                background-color: $white;
+            }
+            .active{
+                background-color: $darkyellow;
+            }
+        }
+        .small{
+            color:$darkyellow;
+            margin-top: 10px;
+        }
+        .buy{
+            display: block;
+            margin-top: 15px;
+            text-decoration: underline;
+            text-align: center;
+            color: $darkyellow;
+            font-size: 13px;
+            font-weight: bold;
+        }
+    }
+    .box-extent{
+        .btn{
+            @include button-hover($darkyellow,$white)
+        }
+    }
+    .extent-block3-flex2{
+        .btn{
+            @include button-hover($darkyellow,$white)
+        }
+    }
+    .extent-block4-flex2{
+        .btn{
+            @include button-hover($darkyellow,$white)
+        }
+    }
+}

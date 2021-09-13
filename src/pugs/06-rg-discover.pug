@@ -1,0 +1,162 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title The Natives - DISCOVER
+    
+block main-wrapper
+    h1(style="display:none") The Natives - DISCOVER
+    .wrapper-child.discover
+        .block-fix
+            ul
+                li
+                    a(href="#ss2")
+                li
+                    a(href="#ss3")
+                li
+                    a(href="#ss6")
+                li
+                    a(href="#ss7")
+        .common-hero.discover-hero
+            .induction-flex2
+                    .content
+                        h2 Discover
+                        p Implement a framework to Discover<br/> opportunities and build a plentiful pipeline.
+                        a(href="#").btn Learn more 
+                    .img
+                        img(src="./assets/imgs/img-induction.jpg", alt="")
+        #ss1
+            .process-flex2
+                .content-left
+                    .content
+                        h3 Process discovery is the <br/>  cornerstoneof every <br/> successful automation program.
+                        p Selecting the right processes to automate is the most important decision you will make in the implementation of your automation technology solution. 
+                        p Organizations want to reap the benefits of automation, but often struggle to know where to start, or how to realize the desired ROI. Even the best technology will fail to deliver if not deployed on suitable processes. Not finding the right processes, using the right technology or business functions can cause the program to stall.
+                .content-right
+                    h3(style='opacity:0') Process discovery is the <br/>  cornerstoneof every <br/> successful automation program.
+                    .content
+                        h4 Reveal Group’s Discover  <br/>  approach leaves no stone left  <br/>  unturned.
+                        p With over six years delivering Intelligent Automation across 25+ industries, Reveal Group has perfected the approach to pipeline generation, helping you avoid common pitfalls and preparing you for success.
+        #ss2.satan-nav
+            .induction-flex2.block-induction
+                .content
+                    h4 
+                        span 01. 
+                        span Automation Heatmap
+                    p Your first critical component to ensure a continuous pipeline of automation opportunities.
+                    p Creating an Automation Heatmap quickly shines light on potential high impact areas throughout your organization, directing downstream pipeline generation efforts appropriately.
+                    .owl-carousel.owl-theme.owl-deliver-ss2 
+                            .item.block-deliver
+                                .content
+                                    h3 Map
+                                    p Map the organizational structure and relative team sizes
+                            .item.block-deliver
+                                .content
+                                    h3 Assign
+                                    p Assign the probability of automation/improvement to each team
+                            .item.block-deliver
+                                .content
+                                    h3 Assess
+                                    p Assess the results and use them as a guide for undertaking a more detailed assessment of the business
+                    .owl-carousel.owl-theme.owl-induction-ss5.heatmap-flex2
+                        .item
+                            h3 Features
+                            ul
+                                li Accurate, up-to-date Enterprise input data used to quickly identify areas with the highest potential value from automation 
+                                li Industry insight provided to understand automation potential within each area
+                        .item   
+                            h3 Outcomes
+                            ul
+                                li Quickly identify areas with greatest chance of value from automation
+                                li Screens functional areas for high value, high effort, high cost functions and processes
+                                li Prioritized list of business areas to target for the Operational Diagnostic
+                                li High-level economic modelling and financial targets
+                .img
+                    img(src="./assets/imgs/img-induction.jpg", alt="")
+            #ss3.satan-nav
+                .title
+                    h3 
+                        span 02. 
+                        span Operational Diagnostic
+                    p Our Operational Diagnostic approach allows all intelligent automation opportunities to be<br/> quickly identified, scoped, and prioritized
+                    p An experienced team of Reveal Group Consultants take a rigorous approach to identify <br/>all automation candidates within your organization.        
+                img(src="./assets/imgs/operational.png", alt="" width="100%")
+            #ss4
+                .imgs-d-flex
+                    -for(i=1;i<4;i++)
+                        img(src=`./assets/imgs/img-features${i}.png`, alt="")
+                .features-flex2
+                    .content-left
+                        h3 Features
+                        ul
+                            li Process mining performed on selected business areas
+                            li Exhaustive list of business processes generated and considered for automation based on value and ease of automation
+                    .content-right
+                        h3 Outcomes
+                        .owl-carousel.owl-theme.owl-induction-ss3
+                            .item 
+                                h4 Prioritized<br/> Automation Pipeline
+                                p A pipeline of value-creating opportunities are prioritized based on speed to value, impact and strategic alignment with business goals
+                            .item 
+                                h4 Immediate<br/> Opportunities
+                                p Processes assessed and determined to be strategic and tactical automation opportunities, including for use with complementary technologies
+                            .item 
+                                h4 IT Application <br/>Improvements
+                                p Opportunities associated with customizing and adapting process-centric IT systems such as workflow, CRM, ERP etc.
+                            .item
+                                h4 Improvement<br/> Opportunities
+                                p Processes that require action to be included in the automation solution (e.g. input digitization, data structuring, standardization, etc.) 
+            #ss5
+                .block-training
+                    .content 
+                        h4 Placeholder title
+                        p placeholer  was established in 2005 with the purpose of delivering technology-driven, innovative consulting services that accelerate change, reduce costs, increase productivity and improve the overall performance of our clients around the world.     
+                        span.prev-slide-d
+                        span.next-slide-d 
+                    .owl-carousel.owl-theme.owl-landing-mobie-ss4
+                        -for(i=1;i<5;i++)
+                            //if class = item1 => visible after circle else hidden
+                            div(class=`item item${i}`)
+                                .content
+                                    .img
+                                        img(src="./assets/imgs/slide-landing-ss5.jpg", alt="")
+                                    span=`0${i}.`
+                                    h3 Foundation Training Course
+                                    p One week introductory course to give an overview of the software and concepts – the perfect way to kick-start your Blue Prism journey.
+            #ss6.satan-nav
+                .induction-flex2.block-induction
+                    .content
+                        .content__left
+                            h4 
+                                span 03. 
+                                span Process Mining
+                            p Your first critical component to ensure a continuous pipeline of automation opportunities.
+                            p Creating an Automation Heatmap quickly shines light on potential high impact areas throughout your organization, directing downstream pipeline generation efforts appropriately.
+                            .owl-carousel.owl-theme.owl-deliver-ss2 
+                                    .item
+                                        img(src="./assets/imgs/icons/process-icon1.svg", alt="")
+                                        h3 BUSINESS <br/>SYSTEMS
+                                    .item 
+                                        img(src="./assets/imgs/icons/process-icon2.svg", alt="")
+                                        h3 DIGITAL EVENTS<br/> DATA
+                                    .item 
+                                        img(src="./assets/imgs/icons/process-icon3.svg", alt="")
+                                        h3 ML &amp; BIG DATA <br/>CLUSTERING
+                            p Process mining software uses an algorithm to analyze these digital footprints and create an evidence based process flow and many more valuable insights.
+                        .content__right
+                            img(src="./assets/imgs/process-right.png", alt="")
+                    .img
+                        img(src="./assets/imgs/img-induction.jpg", alt="")
+            #ss7.satan-nav
+                h3 
+                    span 04. 
+                    span RoboManager
+                p Our automation acceleration tools are specifically designed to help<br/> clients implement a best practices RPA program
+                p Complete transparency at each stage of the <br/>Automation Lifecycle is available in Reveal RoboManager
+                    span ™
+                a(href="#").btn Learn more about RoboManager
+                .img
+                    img(src="./assets/imgs/img-robomanager.png", alt="")
+            #ss8
+                include ./parts/includes/04-block-frm-include.pug
+
+                

@@ -1,0 +1,89 @@
+.induction-flex2{
+    &>.content,&>.img{
+        width: 50%;
+        position: relative;
+    }
+   
+    .img img{
+        position: absolute;
+        //bottom: 60px;
+        right: 0;
+        width: 100%;
+        height: 115%;
+        object-fit: cover;
+    }
+    h3{
+        font-size: 13px;
+        letter-spacing: 1px;
+        color:$darkblue;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    h4{
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 35px;
+        color:$textblack;
+        margin: 20px 0;
+    }
+    li{
+        position: relative;
+        font-size: 16px;
+        color: black;
+        line-height: 22px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        &::before{
+            position: absolute;
+            left: -10px;
+            top: 10px;
+            transform: translate(0, -50%);
+            content: '';
+            width: 4px;
+            height: 4px;
+            background-color: black;
+            border-radius: 50%;
+        }
+    }
+    &>.content{
+        padding:60px 80px;
+    }
+    @include respond-to(1024){
+         
+        flex-direction: column-reverse;
+
+        .content,.img{
+            width: 100%;
+        }
+        .content{
+            padding:30px 30px; 
+        } 
+        .img{
+          min-height: 300px;
+          //  margin-top: 60px;
+            text-align: center;
+            position: relative;
+         img{
+            max-width: 90%;
+            position: relative;
+            bottom: 0;
+            right: 0; 
+        }
+       
+    }
+    @include respond-to(600){
+        .img{
+           // min-height: 100px;
+            
+            position: relative; 
+            img{
+                max-height: fit-content;
+                max-width: 90%;
+                position: absolute;
+                bottom: 0;
+                right: 0; 
+                }  
+            }
+        }
+    }    
+}

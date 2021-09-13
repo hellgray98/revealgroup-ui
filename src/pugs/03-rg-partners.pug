@@ -1,0 +1,47 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title The Natives - RG PARTNERS
+    
+block main-wrapper
+    h1(style="display:none") RG PARTNERS
+    .wrapper-child.rg-partner
+        .hero-partner
+            .induction-flex2
+                .content
+                    h3 PARTNERS 
+                    h4 Our Partner Network
+                    p Reveal Group partners with the leading Technology, Implementation and Consulting companies in the Intelligent Automation space. Enterprises leverage Reveal Group’s global Partner ecosystem to achieve their automation and digital transformation objectives. 
+                     
+                .img
+                    img(src="./assets/imgs/hero-partner.jpg", alt="")
+        .ss1
+            h3 OUR PARTNERS
+            h4 Technology Partners
+            p Together with our curated ecosystem of industry-leading companies, we help<br/> our customers harness the power of the most impactful Intelligent<br/> Automation to transform their businesses.
+            .list-client
+                include ./parts/includes/02-block-client.pug
+        .ss2
+            h3 OUR PARTNERS
+            h4 Business Alliances
+            p You’re in great company. We partner with world-class<br/> organisations to leverage best-in-breed capabilities and <br/> share our expertise and award-winning methodologies.
+            .form-work-flex2
+                .content-form
+                    .content
+                        h3 PARTNER WITH US
+                        h4 Let’s Work Together
+                        p Joining our partner ecosystem means being part of a community. Whether you’re looking to create new revenue opportunities with existing clients, acquire new customers, build out your automation program, or all of the above, we’ve got the tools you need to make it happen.
+                .contact-form
+                    include ./parts/includes/03-block-form-contact.pug
+        .ss3
+            h4 Related Insights
+            .news-article
+                .owl-carousel.owl-theme.owl-related
+                    - for(i=1;i<4;i++)
+                        .item
+                            //class news or event
+                            .content.news
+                                i news
+                                h3 Experts in intelligent<br/> automation
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                a(href="#") learn more

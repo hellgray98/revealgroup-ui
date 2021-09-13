@@ -1,0 +1,104 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title The Natives - Deliver
+    
+block main-wrapper
+    h1(style="display:none") The Natives - Deliver
+    .wrapper-child.deliver
+        .common-hero.deliver-hero
+            .induction-flex2
+                    .content 
+                        h2 Establish
+                        p Build an operating model to Enable your<br/> organization to embrace Intelligent<br/> Automation
+                        a(href="#").btn Learn more
+                        a(href="#").btn Explore Training Courses
+                    .img
+                        img(src="./assets/imgs/img-induction.jpg", alt="")
+        .ss1
+            h3 DELIVER
+            h4 Delivery of automated processes is your program’s engine room and we are your master mechanics.
+            .owl-carousel.owl-theme.owl-induction-ss3
+                -for(i=1;i<5;i++)
+                    .item.block-deliver
+                        .content
+                            h3 QUALITY
+                            p All automations must meet our best practice standards, developed over 5+ years in the industry
+        .ss2
+            .induction-flex2.block-induction
+                .content
+                    h4 Automation Delivery
+                    p Defining and implementing your RPA delivery methodology is typically the first step for an organization on their automation journey so it is critical to get it right.
+                    h3 Common Delivery Issues
+                    .owl-carousel.owl-theme.owl-deliver-ss2
+                        -for(i=1;i<5;i++)
+                            .item.block-deliver
+                                .content
+                                    h3 Project Timelines
+                                    ul
+                                        li Automation development taking much longer than planned
+                                        li Shifting business requirements
+                .img
+                    img(src="./assets/imgs/img-induction.jpg", alt="")
+        .ss3
+            p With 150+ automation deliveries under our belt, we have the tools<br/> and experience to drive your intelligent automation program every<br/> step of the way.
+        .ss4
+             .owl-carousel.owl-theme.owl-deliver-ss2
+                -for(i=1;i<4;i++)
+                    .item.block-deliver
+                        .img
+                            img(src=`./assets/imgs/deliver-0${i}.png`, alt="")
+                        .content
+                            h3 Developer Training &amp;<br/> Masterclasses
+                            ul
+                                li Reveal Group resources run weekly Masterclasses to reinforce best practices introduced during our Reveal Academy Training programs.
+                                li Knowledge gained in each Masterclass is assessed using multiple-choice test to enhance and gauge the progress of each junior developer
+        .ss5
+            .block-training
+                .content
+                    h4 Successful automation sprints follow our standard Delivery Methodology, involving five stages and typically taking 6-10 weeks.
+                    span.prev-slide-d
+                    span.next-slide-d 
+                .owl-carousel.owl-theme.owl-landing-mobie-ss4
+                    -for(i=1;i<5;i++)
+                        //if class = item1 => visible after circle else hidden
+                        div(class=`item item${i}`)
+                            .content
+                                .img
+                                    img(src="./assets/imgs/slide-landing-ss5.jpg", alt="") 
+                                i ~ 1 WEEK
+                                h3 Define 
+                                ul
+                                    li Thorough process definition ensure little to no re-work due to assumptions
+                                    li One Accredited Blue Prism practitioner sees a process through the delivery lifecycle to increase efficiency 
+        .ss6 
+            .mentored-flex2
+                .img
+                    img(src="./assets/imgs/img-induction.jpg", alt="")
+                .content
+                    h4 Mentored Delivery
+                    p “Using RoboDesigner helped us reduce our average delivery wave from 10 weeks to 7 weeks. We’re confident our automation components are high-quality and reusable, too!”
+                    h3 Design Authority Lead, Mid-Sized US-Based Insurance Company
+                    .owl-carousel.owl-theme.owl-deliver-ss2
+                        -for(i=1;i<5;i++)
+                            .item.block-deliver
+                                .content
+                                    p Creating a sustainable Intelligent Automation business function means building self-sufficiency. The fastest and most efficient approach to build your internal capabilities is to work collaboratively with experienced practitioners. 
+        .ss7
+        img(class="bg-homepage" src="assets/imgs/bg-homepage1.jpg" style="width:100%;height:160px;object-fit: cover;")            
+        .ss8
+            .authority-dflex2
+                .content
+                    h4 Design Authority + Quality Assurance
+                    p Virtually delivered instructor-led live training sessions offers you the same benefit you would receive in attending one of our scheduled classroom training sessions. Students connect to our virtual classroom which will provide a similar experience as facilitator led training, with live interaction, and experienced, certified instructors
+                .img
+                    img(src="assets/imgs/img-authority.jpg", alt="" width="100%")
+            h4 Our automation acceleration tools are specifically designed to help clients implement all of these RPA best practices at every stage of Delivery.
+        .ss9
+            .owl-carousel.owl-theme.owl-deliver-ss2.robo-item
+                +roboItem('#00A755','IDENTIFY, DELIVER, BENEFIT','assets/imgs/auto-reveal01.svg','A single source of truth to identify, prioritize, deliver and realize benefits from automation, for any RPA tool.')
+                +roboItem('#F3B45A','AUTOMATE DELIVERY','assets/imgs/auto-reveal02.svg','Instantly creates Blue Prism automation components to best practice standards, for you.')
+                +roboItem('#DA4039','AUTOMATE CODE REVIEWS','assets/imgs/auto-reveal03.svg','A proactive self-service check of your Blue Prism code quality so you get continuous, real-time feedback.')
+                 
+        .ss10
+            include ./parts/includes/04-block-frm-include.pug

@@ -1,0 +1,118 @@
+.wrapper-child
+    .hero
+        .hero__content
+            .content
+                h6 Your Intelligent Automation Services Company
+                h1 Automate Better
+                p Delivering innovative technology solutions that improve <br/>the workforce and better the lives of its people.
+                a(href="#").btn SERVICES
+                a(href="#").btn PRODUCTS
+        .hero__img
+            img(src="assets/imgs/hero-img.png", alt="")
+    main
+        .ss1
+            h2 Latest News &amp; Events
+            .news-article
+                .owl-carousel.owl-theme.owl-news 
+                    +ArticleItem("","NEWS","Experts in intelligent automation","Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts.","Read More","news")
+                    +ArticleItem("","EVENT","Experts in intelligent automation","Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts.","Read More","event")
+                    +ArticleItem("","WHITEPAPER","Experts in intelligent automation","Imagine a different kind of workforce – one that learns countless skills in the blink of an eye, that becomes more efficient every day, that doesn’t sleep or take holidays, that expands and retracts.","Read More","white")
+            
+            .view-more
+                a(href="#").btn View more  
+        .ss2
+            .title
+                h3 SERVICES
+                p What makes us different
+            .list-collapse
+                -for(i = 1; i<5;i++)
+                    //set flex-direction and justify-content
+                    .title-collapse(style="justify-content:flex-start")
+                        span Establish
+                        //set background inline
+                        button.collapsible.btn(style="background:#0069A3") 
+                            span Explore
+                    .content
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    //set flex-direction and justify-content
+                    .title-collapse(style="justify-content:flex-end")
+                        span Enable
+                        //set background inline
+                        button.collapsible.btn(style="background:#7E5C8E") 
+                            span Explore
+                    .content
+                        .owl-carousel.owl-theme.owl-collapse
+                            .item
+                                img(src="./assets/imgs/icons/industries-icon.png", alt="")
+                                h3 Platform <br/>Design &amp; Build
+                                p Establish environments to meet your needs now and in the future
+                                a(href="#").btn Learn more
+                        
+                    //set flex-direction and justify-content
+                    .title-collapse(style="flex-direction:row-reverse;justify-content:center")
+                        span Discover
+                        //set background inline
+                        button.collapsible.btn(style="background:#E0682E") 
+                            span Explore
+                    .content
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        img(class="bg-homepage" src="assets/imgs/bg-homepage1.jpg" )            
+        .ss3
+            h3 PRODUCTS
+            p Your automation accelerator apps
+            .products-flex2
+                .item
+                    img(src="./assets/imgs/product-img1.png", alt="")
+                    .content
+                        img(src="./assets/imgs/content-product-img1.png", alt="")
+                        p Created by our award-winning team to help you Automate Better, RoboSuite accelerates your automations to deliver higher quality outcomes, faster.
+                        a(href="#").btn Automate Better
+                .item  
+                    img(src="./assets/imgs/product-img2.png", alt="")
+                    .content
+                        img(src="./assets/imgs/content-product-img2.png", alt="")
+                        p Operational Intelligence to simplify your Operations Management.
+                        a(href="#").btn Automate Better
+        .ss4
+            h3 OUR CLIENTS
+            p Learn from the best
+            .list-client
+                include ./02-block-client.pug
+            .seemore
+                a(href="#").btn   See More Customer Stories
+        .ss5
+            .our-flex2
+                .img
+                    img(src="./assets/imgs/our-company.png", alt="")
+                .group
+                    .group__item  
+                        .content
+                            h3 Our Company
+                            p Reveal Group transforms businesses for the digital era. With innovative technologies and industry-leading expertise, we help clients to quickly and cost effectively transform their business performance.
+                            a(href="#").btn Meet our Team 
+                            a(href="#").btn Meet our Partners
+        .ss6 
+            h2 Industries
+            .owl-carousel.owl-theme.owl-industries
+                    - for(i=1;i<10;i++)
+                        .item(data-hash=`${i}`)
+                            //class news or event
+                            .content
+                                img(src="./assets/imgs/icons/industries-icon.png", alt="")
+                                h3 Experts in intelligent automation
+                                p Deliver superior service to your customers while cutting operational costs and reducing regulatory risk through Intelligent Automation solutions.
+
+                                a(href="#") Learn more
+                    .item.view
+                            .content
+                                h3 Industries
+                                a(href="#") View All
+
+
+
+
+
+
+                
+        
+

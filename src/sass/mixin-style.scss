@@ -1,0 +1,156 @@
+.mixin-flex2{
+    margin-top: 120px;
+    padding: 140px 60px;
+    padding-bottom: 0;
+    img{max-width: 100%;}
+    .img,.content{
+        width: 50%;
+    }
+    .img{
+        img{ 
+            min-height: 120%;
+        }
+    }
+    h2{
+        font-size: 16px;
+        color:$white;
+        margin: 35px 0;
+        width: 50%;
+    }
+
+    .btn{
+        border: 1px solid $white;
+        color: $white;
+        margin-right:  20px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    @include respond-to(1024){
+        .img{
+            text-align: center;
+           width: 50%; 
+        }
+    }
+    @include respond-to(768){
+        .img,.content{
+            width: 100%;
+        }
+    }
+    @include respond-to(600){
+        margin-top: 100px;
+        .img,.content{
+            width: 100%; 
+        }
+         
+        .img{
+            width: 100%;
+            position: relative;
+            min-height: 200px;
+            img{
+                position: absolute;
+                top: 50%;
+                right: -25%;
+                transform: translate(0,-25%);
+            } 
+        }
+    }
+}
+
+
+.mix-ss-mix-item{
+    padding: 0 140px 140px 140px;
+    .owl-carousel{
+        margin-top: -5%;
+    }
+    .owl-dots {
+        text-align: left;
+        margin-top: 0;
+        padding-bottom: 40px;
+       .owl-dot{ 
+           background: $background; 
+       }
+       .active{ 
+           background: $darkyellow; 
+       }
+   }
+   @include respond-to(768){
+        padding:0 40px 40px 40px;
+        .owl-carousel{
+            margin-top: -20%;
+        }
+    }
+    @include respond-to(500){ 
+        .owl-carousel{
+            margin-top: -35%;
+        }
+    }
+}
+.mix-item{
+    padding: 0 20px ;
+    hr{
+        border: none;
+        margin: 40px 0;
+    }
+    img{
+        width: 100%;
+    }
+    h3{
+        @extend %share-h24;
+        color: $textblack;
+        margin-bottom: 20px;
+    }
+    p{
+        color:#43413C;
+    }
+}
+.block-top-bar{
+    background-color: $background;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    &__nav{
+        display: flex;
+        align-items: center;
+        li{
+            display: inline;
+             
+            a{  
+                padding: 10px 20px;
+                font-weight: bold;
+                text-decoration: none;
+                color: black;
+                
+            }
+        }
+        
+        .btn{
+            color: $white; 
+            &:hover{
+                color:$darkblue;
+                background-color: $white;
+            }
+        }
+        
+    }
+    select{
+        display: none;
+        font-size: 14px;
+        color: $textblack;
+        border: none;
+        outline: none;
+        font-weight: bold;
+        background-color: transparent;
+    }
+    @include respond-to(1024){
+        padding: 15px 25px;
+        select{
+            display: block;
+        }
+        &__nav{
+            display: none;
+        }
+    }
+}
+
